@@ -18,6 +18,15 @@
  			<ul id="navLeft"> <!-- use this one for styling the nav bar-->
  				<li><a href="#">Home</a></li>
 				<li><a href="#">Aanbiedingen</a></li>
+				
+				<li><form class="inputs">
+						<input class="inputs" type="text" name="searchTerm" value="zoekterm"> <!--TODO: javascript: bij klikken textbox, voorbeeldtekst verdrijnt-->
+						<input class="inputs" type="text" name="searchGroup" value="dit moet een lijst worden">
+						<input id="searchPCnum" class="inputs" type="text" name="searchPCnum" value="">
+						<input id="searchPCchar" class="inputs" type="text" name="searchPCchar" value="">
+						<input class="inputs" type="submit" value="Zoek">
+					</form>
+				</li>
 				<ul id="navRight"> <!-- use this one for styling the nav bar-->
 				<li><a href="#">MijnMarkplaatz</a></li>
 				<li><a href="#">Login</a></li>
@@ -34,46 +43,90 @@
 
 <body>
 	
+
+<div class="wrapper">
 <div class="side-nav">
 		<ul>
 			<li><h3>Groepen</h3></li>
-			<li>Groep 1</li>
-			<li>Nog een groep</li>
-			<li>Groep drie</li>
-			<li>Vierde groep</li>
-			<li>nog eentje</li>
-			<li>nog maar een</li>
-			<li>testen hoe het eruit ziet als het lang is</li>
-			<li>Vierde groep</li>
+			<li><a href="#">Antiek en Kunst</a></li>
+			<li><a href="#">Verzorging</a></li>
+
+			<li><b>Vrije tijd</b></li>
+			<li><a href="#">Boeken</a></li>
+			<li><a href="#">Films en Muziek</a></li>
+			<li><a href="#">Gaming</a></li>
+
+			<li><b>Op de weg</b></li>
+			<li><a href="#">Auto's</a></li>
+			<li><a href="#">Fietsen</a></li>
+			<li><a href="#">Trekkers</a></li>
 		</ul>
 	</div>
-	<div class="uitgelicht">
-		<div id="artikel">
-			<h3>Artikelnaam</h3>
-			<img src="res/test-img.png">
-			<br>			
-			<a href="#">Artikel bekijken</a>
-		</div>
-		<div id="artikel">
-			<h3>Artikelnaam</h3>
-			<img src="res/test-img.png">
-			<br>			
-			<a href="#">Artikel bekijken</a>
-		</div>
-		<div id="artikel">
-			<h3>Artikelnaam</h3>
-			<img src="res/test-img.png">
-			<br>			
-			<a href="#">Artikel bekijken</a>
-		</div>
-		<div id="artikel">
-			<h3>Artikelnaam</h3>
-			<img src="res/test-img.png">
-			<br>			
-			<a href="#">Artikel bekijken</a>
-		</div>
+	
 
+
+<div class="uitgelicht">
+
+<!--NOTE: in Javascript moet worden gewerkt met de [id] van de artikelen om de data te veranderen-->
+	<h1>Recent geplaatst</h1>
+		<div class="artikel" id="ArtU1">
+			<h3>Artikelnaam</h3>
+			<img src="res/test-img.png">
+			<br>			
+			<a href="#">Artikel bekijken</a>
+		</div>
+		<div class="artikel" id="ArtU2">
+			<h3>Artikelnaam</h3>
+			<img src="res/test-img.png">
+			<br>			
+			<a href="#">Artikel bekijken</a>
+		</div>
+		<div class="artikel" id="ArtU3">
+			<h3>Artikelnaam</h3>
+			<img src="res/test-img.png">
+			<br>			
+			<a href="#">Artikel bekijken</a>
+		</div>
+		<div class="artikel" id="ArtU4">
+			<h3>Artikelnaam</h3>
+			<img src="res/test-img.png">
+			<br>			
+			<a href="#">Artikel bekijken</a>
+		</div>
 	</div>
 
+	<div class="uitgelicht">
+	<h1>Populair</h1>
+		<div class="artikel" id="ArtP1">
+			<h3>Artikelnaam</h3>
+			<img src="res/test-img.png">
+			<br>			
+			<a href="#">Artikel bekijken</a>
+		</div>
+		<div class="artikel" id="ArtP2">
+			<h3>Artikelnaam</h3>
+			<img src="res/test-img.png">
+			<br>			
+			<a href="#">Artikel bekijken</a>
+		</div>
+		<div class="artikel" id="ArtP3">
+			<h3>Artikelnaam</h3>
+			<img src="res/test-img.png">
+			<br>			
+			<a href="#">Artikel bekijken</a>
+		</div>
+</div>
+</div>
+
+
+
 </body>
+
+
+<footer id="ftr">
+<h4>________________________________________________________________________</h4>
+<img src="res/logo2.png">
+<p><i>Praktische Opdracht Informatica V6</i></p>
+<p>	&#9400; Team Anime 2018</p>
+</footer>
 </html>
