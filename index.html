@@ -9,22 +9,18 @@
 
 	<title>Markplaatz - Home</title>
 
-
-	
 	<a><img id="logo" src="res/logo2.png"></a>
 	
 	<div class="Main-Nav">
-		<nav>
+		<nav id="wrapnav">
  			<ul id="navLeft"> <!-- use this one for styling the nav bar-->
  				<li><a href="#">Home</a></li>
 				<li><a href="#">Aanbiedingen</a></li>
-				
+				<li><a href="#">Producten</a></li>
 				<li><form class="inputs">
 						<input class="inputs" type="text" name="searchTerm" value="zoekterm"> <!--TODO: javascript: bij klikken textbox, voorbeeldtekst verdrijnt-->
-						<input class="inputs" type="text" name="searchGroup" value="dit moet een lijst worden">
-						<input id="searchPCnum" class="inputs" type="text" name="searchPCnum" value="">
-						<input id="searchPCchar" class="inputs" type="text" name="searchPCchar" value="">
 						<input class="inputs" type="submit" value="Zoek">
+						<button class="inputs" type="button" onclick="AdvS()">Geavanceerd Zoeken</button>
 					</form>
 				</li>
 				<ul id="navRight"> <!-- use this one for styling the nav bar-->
@@ -96,7 +92,7 @@
 	</div>
 
 	<div class="uitgelicht">
-	<h1>Populair</h1>
+	<h1>Aanbevolen voor u</h1>
 		<div class="artikel" id="ArtP1">
 			<h3>Artikelnaam</h3>
 			<img src="res/test-img.png">

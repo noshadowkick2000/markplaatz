@@ -45,7 +45,7 @@
 
 body {
 	font-family: 'Slabo 27px', serif;
-	background-color:#F6F6F6;
+	background-color:#FFFFFF;
 	padding:0 70px 0 70px;
 }
 #logo{
@@ -55,26 +55,25 @@ body {
 }
 #logo-title{
 	display:inline;
-
 }
 
 
 /*NAVIGATION BAR*/
+
 #navLeft li{
-	
 	display:inline;
-	
 }
 #navLeft{
 	list-style-type: none; 	
  	overflow:hidden; 
-    
-    background-color:#B90504;
+	border-width:5px;
+	border-color:#EF5007;
     border-radius:5px;
+    background-color:#191818;
    
 }
 #navLeft li a{
-    color:#F6F6F6;
+    color:#FFFFFF;
     text-decoration: none;
     display:inline-block;
     font-size:17px;
@@ -117,7 +116,7 @@ body {
 /*SIDE NAVIGATION*/
 .side-nav{
 	
-	background-color:#333333;
+	background-color:#191818;
 	font-family: 'Slabo 27px', serif;
 	border-radius:5px;
 	
@@ -127,7 +126,7 @@ body {
 
 	border-style:solid;
 	border-width:5px;
-	border-color:#E8E8E8;;
+	border-color:#EF5007;
 	border-radius:7px;
 	height:800px;
 }
@@ -136,15 +135,15 @@ body {
 	padding-left:10px;
 	padding-right:10px;
 
-	color:#E8E8E8;
+	color:#EF5007;
 	list-style-type:none;
 }
 
 .side-nav li{
-	padding-bottom:10px;/*ruimte tusesn linkss*/
+	padding-bottom:10px;/*ruimte tussen links*/
 }
 .side-nav a{
-	color:#F6F6F6;
+	color:#FFFFFF;
 	text-decoration:none;
 }
 .side-nav a:hover{
@@ -162,7 +161,7 @@ body {
 .artikel{
 	border-style:solid;
 	border-width:5px;
-	border-color:#E8E8E8;;
+	border-color:#EF5007;
 	border-radius:7px;
 	width:200px;
 	height:300;
