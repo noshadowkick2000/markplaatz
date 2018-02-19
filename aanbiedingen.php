@@ -22,34 +22,35 @@
   	<div id="navi" class="container">
       <img class="mx-auto" width="400" src="res/logo2.png">
   		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
-  		
-  			 <ul class="nav navbar-nav navbar-left">
-    			<li class="nav-item">
-    			  	<a class="nav-link" href="index.php">Home</a>
-    			</li>
-    			
-    			<li class="nav-item">
-     				<a class="nav-link" href="products.php">Producten</a>
-    			</li>
+        <style>
+                a{
+                  color:white;
+                }
+              </style>
+         <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aanbiedingen.php">Aanbiedingen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Producten</a>
+          </li>
         </ul>
-        <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item navbar-right">
-		  <li class="nav-item">
-     				<a class="nav-link" href="Forum.php">Forum</a>
-    			</li>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
             <a class="nav-link" href="#">MijnMarktplaatz</a>
           </li>
-          <li class="nav-item navbar-right">
+          <li class="nav-item">
             <a class="nav-link" href="login.php">Login</a>
           </li>
-  			</ul> 		
-  		</nav>
-  		<div class="alert alert-primary">
-  			<strong>Melding </strong>.......
-  		</div>
+        </ul>     
+      </nav>
   	</div>
-	
+	  
 
+<br><br>
     <div class="container">
       <div class="row">
         <div class="col-sm-3"> 
@@ -81,7 +82,7 @@
         </div>
         <div class="col-sm-8">
 
-          <H3>Recent geplaatst</H3>
+          <H3>Nieuw</H3>
           <div class="table-responsive-xl" style="overflow-x:auto;">
           <table class="table">
            
@@ -187,18 +188,7 @@
       </div>
       
     </div>
+
   	
   </body>
-
-  <br><br><br><br>
-    <div class="container">
-      <img  width="200" src="res/logo2.png">
-      <h5>Praktische opdracht informatica</h5>
-      <h6><i>Gemaakt door  Twan Holtrop, Krishan Jokhan, Sander Koning, Jesper Kussendrager, Coen van Wieringen en Tim Yeung.</i></h6>
-      <p>© Team Anime 2018</p>
-      
-    </div>
-    
-    
-
 </html>

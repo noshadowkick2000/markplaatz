@@ -19,35 +19,43 @@
   </head>
 
   <body>
-  	<div id="navi" class="container">
-      <img class="mx-auto" width="400" src="res/logo2.png">
-  		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
-        <style>
+		<style>
                 a{
                   color:white;
                 }
               </style>
-         <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Aanbiedingen</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Producten</a>
-          </li>
+   
+	 <div id="navi" class="container">
+      <img class="mx-auto" width="400" src="res/logo2.png">
+  		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
+  		
+  			 <ul class="nav navbar-nav navbar-left">
+    			<li class="nav-item">
+    			  	<a class="nav-link" href="index.php">Home</a>
+    			</li>
+    			
+    			<li class="nav-item">
+     				<a class="nav-link" href="products.php">Producten</a>
+    			</li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item navbar-right">
+		  <li class="nav-item">
+     				<a class="nav-link" href="Forum.php">Forum</a>
+    			</li>
             <a class="nav-link" href="#">MijnMarktplaatz</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item navbar-right">
             <a class="nav-link" href="login.php">Login</a>
           </li>
-        </ul>     
-      </nav>
-  	</div>
+  			</ul> 		
+  		</nav>
+  		<div class="alert alert-primary">
+  			<strong>Melding </strong>.......
+  		</div>
+  	</div> 
+	  
+	  
 	  
 
 <br><br>
