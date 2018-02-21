@@ -63,7 +63,7 @@
       <h2>Account Aanmaken</h2>
       <br>
       
-      <form action="/accCreate.php">
+      <form action="accCreate.php">
       <h5>Algemene Informatie</h5>
         <div class="form-group">
           <label for="name">Voorletter(s) </label>
