@@ -45,7 +45,7 @@
   			</ul> 		
   		</nav>
   		<div class="alert alert-primary">
-  			<strong>Melding </strong>.......
+  			<strong>Melding </strong>.....
   		</div>
   	</div>
 	
