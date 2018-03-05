@@ -20,6 +20,11 @@
 
   <body>
   	<div id="navi" class="container">
+  	<style>
+  		li a{
+  			color:white;
+  		}
+  	</style>
       <img class="mx-auto" width="400" src="res/logo2.png">
   		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
   		
@@ -33,12 +38,14 @@
     			</li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item navbar-right">
+          
 		  <li class="nav-item">
-     				<a class="nav-link" href="Forum.php">Forum</a>
-    			</li>
-            <a class="nav-link" href="#">MijnMarkplaatz</a>
+     			<a class="nav-link" href="Forum.php">Forum</a>
+    	  </li>
+    	  <li>
+            	<a class="nav-link" href="#">MijnMarkplaatz</a>
           </li>
+
           <li class="nav-item navbar-right">
             <a class="nav-link" href="login.php">Login</a>
           </li>
