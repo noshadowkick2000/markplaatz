@@ -42,7 +42,7 @@
 		  <li class="nav-item">
      				<a class="nav-link" href="Forum.php">Forum</a>
     			</li>
-            <a class="nav-link" href="#">MijnMarktplaatz</a>
+            <a class="nav-link" href="account.php">MijnMarktplaatz</a>
           </li>
           <li class="nav-item navbar-right">
             <a class="nav-link" href="login.php">Login</a>
