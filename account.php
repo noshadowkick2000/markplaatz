@@ -43,7 +43,7 @@
      			<a class="nav-link" href="Forum.php">Forum</a>
     	  </li>
     	  <li>
-            	<a class="nav-link" href="#">MijnMarkplaatz</a>
+            	<a class="nav-link" href="#">MijnMarkplaatz bewerken</a>
           </li>
 
           <li class="nav-item navbar-right">
@@ -51,15 +51,12 @@
           </li>
   			</ul> 		
   		</nav>
-  		<div class="alert alert-primary">
-  			<strong>Melding </strong>.......
-  		</div>
   	</div>
 	
 
-    <div class="container">
+    <div class="container pt-3">
       <div class="row">
-        <div class="col-sm-3"> 
+        <div class="col-sm-4"> 
         <div class="card">
 		<div class="card bg-dark text-white">
 		 <img class="card-img-top" src="http://arrkenterprises.com/wp-content/uploads/2015/02/empty-profile-pic.png">
@@ -70,12 +67,15 @@
 		</div>
 		</div>
 		</div>		
-           
           
         </div>
+		<div class="col-sm-8"> 
+        <p><h5 id="" class="p-3" style="background-color:#d0dbd8; border-radius:0.25vw;">Dit is een kleine bio</h5></p>
+		</div> 
       </div>
       
     </div>
+
   	
   </body>
 
