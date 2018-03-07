@@ -51,13 +51,10 @@
           </li>
   			</ul> 		
   		</nav>
-  		<div class="alert alert-primary">
-  			<strong>Melding </strong>.......
-  		</div>
   	</div>
 	
 
-    <div class="container">
+    <div class="container pt-3">
       <div class="row">
         <div class="col-sm-4"> 
         <div class="card">
