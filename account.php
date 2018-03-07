@@ -43,7 +43,7 @@
      			<a class="nav-link" href="Forum.php">Forum</a>
     	  </li>
     	  <li>
-            	<a class="nav-link" href="#">MijnMarkplaatz</a>
+            	<a class="nav-link" href="#">MijnMarkplaatz bewerken</a>
           </li>
 
           <li class="nav-item navbar-right">
