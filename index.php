@@ -1,6 +1,10 @@
 
 
 <!DOCTYPE html>
+
+<?php
+    session_start();
+?>
 <html lang="en">
   <title>Markplaatz - Home</title>
   <head>
@@ -16,9 +20,12 @@
 	     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
        <meta charset="utf-8"> 
        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <script type="text/javascript" src="script.js"></script>
+       <script>var stage = "<?= $_SESSION['STAGE'];?>"</script>
+       <script>var usrn = "<?= $_SESSION['USRN'];?>"</script>
   </head>
 
-  <body>
+  <body onload="cLoad();">
   	<div id="navi" class="container">
       <img class="mx-auto" width="400" src="res/logo2.png">
   		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
@@ -44,11 +51,11 @@
           </li>
   			</ul> 		
   		</nav>
-  		<div class="alert alert-primary">
-  			<strong>Melding </strong>.....
+  		<div class="alert alert-primary" id="nHEAD">
+  			<strong>Melding: </strong>
   		</div>
   	</div>
-	
+	 
 
     <div class="container">
       <div class="row">

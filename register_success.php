@@ -19,12 +19,13 @@
   </head>
 
   <body>
-  	 <style>
+  		<style>
                 a{
                   color:white;
                 }
               </style>
-	<div id="navi" class="container">
+   
+	 <div id="navi" class="container">
       <img class="mx-auto" width="400" src="res/logo2.png">
   		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
   		
@@ -49,39 +50,22 @@
           </li>
   			</ul> 		
   		</nav>
-  		
-  	</div>
-	  
+  		<div class="alert alert-primary">
+  			<strong>Melding </strong>Registreren is geslaagd.
+  		</div>
+  	</div> 
 
-<br><br>
-    <div class="container">
-		<div class="alert alert-danger">
-			<strong>Notification: </strong><i>Description</i>
-		</div>
-		<h2>Artikel Aanmaken</h2>
-		
-		<form action="createArticle.php">
-			<div class="jumbotron">
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="form-group">
-						<h3>Afbeelding</h3>
-						<img class="mx-auto d-block" width="400" style="border: 10px solid #EF5007" src="res/img.png">
-						
-					</div>
-					
-				</div>
-				<div class="col-sm-4">
-
-				
-				
-				
-				</div>
-			</div>
-			</div>
-		</form>
-    </div>
+  <br>
+  <br>
 
   	
   </body>
+
+  <div class="container">
+      <img  width="200" src="res/logo2.png">
+      <h5>Praktische opdracht informatica</h5>
+      <h6><i>Gemaakt door  Twan Holtrop, Krishan Jokhan, Sander Koning, Jesper Kussendrager, Coen van Wieringen en Tim Yeung.</i></h6>
+      <p>© Team Anime 2018</p>
+      
+    </div>
 </html>

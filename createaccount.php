@@ -64,22 +64,8 @@
       <br>
       
       <form action="accCreate.php" method="post">
-      <h5>Algemene Informatie</h5>
-        <div class="form-group">
-          <label for="name">Voorletter(s) </label>
-          <input type="text" class="form-control" id="name" name="vn">
-        </div>
-        <div class="form-group">
-          <label for="lastName">Achternaam </label>
-          <input type="text" class="form-control" id="lastName" name="an">
-        </div>
-        <div class="form-group">
-          <label for="postcode">Postcode </label>
-          <input type="text" class="form-control" id="postcode pst-num" name="pcc">
-          <input type="text" class="form-control" id="postcode pst-char" name="pcl">
-        </div>
-
-        <h5>Accountinformatie</h5>
+      
+      <h5>Accountinformatie</h5>
         <div class="form-group">
           <label for="email">Emailadres* </label>
           <input type="email" class="form-control" id="email" name="em">
@@ -92,6 +78,31 @@
           <label for="pwd">Wachtwoord* </label>
           <input type="password" class="form-control" id="pwd" name="pswd">
         </div>
+
+
+        <h5>Algemene Informatie</h5>
+        <div class="form-group">
+          <label for="street">Straatnaam </label>
+          <input type="text" class="form-control" id="street" name="street">
+        </div>
+
+        <div class="form-group">
+          <label for="sNum">Huisnummer </label>
+          <input type="text" class="form-control" id="sNum" name="sn">
+        </div>
+
+        <div class="form-group">
+          <label for="postcode">Postcode </label>
+          <input type="text" class="form-control" id="postcode pst-num" name="pcc">
+          <input type="text" class="form-control" id="postcode pst-char" name="pcl">
+        </div>
+
+        <div class="form-group">
+          <label for="woonplaats">Woonplaats </label>
+          <input type="text" class="form-control" id="woonplaats" name="wp">
+        </div>
+
+       
         <button type="submit" class="btn btn-danger">Account Aanmaken</button>
       </form>
     </div>

@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <title>Markplaatz - Home</title>
+  <title>Markplaatz - Inloggen</title>
   <head>
     	 <!-- Latest compiled and minified CSS -->
     	 
@@ -62,14 +62,14 @@
       </div>
       <h2>Inloggen</h2>
      
-      <form action="">
+      <form action="login_auth.php" method="post">
         <div class="form-group">
-          <label for="email">Emailadres </label>
-          <input type="email" class="form-control" id="email">
+          <label for="usr">Gebruikersnaam</label>
+          <input type="text" class="form-control" id="usr" name='usr'>
         </div>
         <div class="form-group">
-          <label for="email">Wachtwoord </label>
-          <input type="password" class="form-control" id="pwd">
+          <label for="email">Wachtwoord</label>
+          <input type="password" class="form-control" id="pwd" name="pwd">
         </div>
         <button type="submit" class="btn btn-danger">Log in</button>
         Nog geen account? <a href="createaccount.php" style="color:blue">Maak hier een account aan</a>
