@@ -1,10 +1,4 @@
-
-
 <!DOCTYPE html>
-
-<?php
-    session_start();
-?>
 <html lang="en">
   <title>Markplaatz - Home</title>
   <head>
@@ -21,8 +15,22 @@
        <meta charset="utf-8"> 
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <script type="text/javascript" src="script.js"></script>
-       <script>var stage = "<?= $_SESSION['STAGE'];?>"</script>
-       <script>var usrn = "<?= $_SESSION['USRN'];?>"</script>
+
+       <?php
+       session_start();
+          if (isset($_SESSION['STAGE'])){
+            $st = $_SESSION['STAGE'];
+          }else{
+            $st = "0";
+          }
+          if (isset($_SESSION['USRN'])){
+            $usrn = $_SESSION['USRN'];
+          }else{
+            $usrn = "";
+          }
+       ?>
+       <script>var stage = "<?= $st;?>"</script>
+       <script>var usrn = "<?= $usrn;?>"</script>
   </head>
 
   <body onload="cLoad();">

@@ -31,12 +31,17 @@ if ($result->num_rows > 0){
 echo $pw_real;
 if ($pw == $pw_real){
 	session_start();
+	
+
 	$_SESSION['STAGE'] = 1;
 	$_SESSION['USRN'] = $us;
+
 	header("Location: index.php");
+
 }else{
-	echo "Login Failed.";
-	echo $pw;
+	session_start();
+	$_SESSION['STAGE'] = 4;
+	header("Location: index.php");
 }
 
 

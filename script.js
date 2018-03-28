@@ -22,6 +22,11 @@ function cLoad(){
 			adjustLogin(0);
 			break;
 		;
+		case 4:
+			document.getElementById('nHEAD').innerHTML = "Inloggen mislukt.";
+			adjustLogin(0);
+			break;
+		;
 		default:
 			document.getElementById('nHEAD').innerHTML = "Welkom bij Markplaatz.";
 			adjustLogin(0);
@@ -37,11 +42,15 @@ function adjustLogin(status){
 		case 0:
 			document.getElementById('login').href = "login.php";
 			document.getElementById('login').innerHTML = "Inloggen";
+
+			
 			break;
 		;
 		case 1:
 			document.getElementById('login').href = "logout.php";
 			document.getElementById('login').innerHTML = "Uitloggen";
+
+		
 			break;
 		;
 	}
