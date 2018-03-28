@@ -1,29 +1,48 @@
+/*Welkomstbericht*/
 function cLoad(){
-	alert(stage);
-	switch(stage){
+	var iStage = Number(stage);
+	switch(iStage){
 		case 0:
-			alert("U bent niet ingelogd.");
-			/*document.getElementById('nHEAD').innerHTML = "U bent nog niet ingelogd.";*/
+			document.getElementById('nHEAD').innerHTML = "U bent nog niet ingelogd.";
+			adjustLogin(0);
 			break;
 		;
 		case 1:
-			alert("U bent ingelogd. Welkom, " + usrn);
-			/*document.getElementById('nHEAD').innerHTML = "Welkom, " + usrn;*/
+			document.getElementById('nHEAD').innerHTML = "Welkom, " + usrn + ".";
+			adjustLogin(1);
 			break;
 		;
 		case 2:
-			alert("Registreren geslaagd.");
-			/*document.getElementById('nHEAD').innerHTML = "Registreren geslaagd.";*/
+			document.getElementById('nHEAD').innerHTML = "Registreren geslaagd.";
+			adjustLogin(0);
 			break;
 		;
 		case 3:
-			alert("Registreren mislukt.");
-			/*document.getElementById('nHEAD').innerHTML = "Registreren mislukt.";*/
+			document.getElementById('nHEAD').innerHTML = "Registreren mislukt.";
+			adjustLogin(0);
 			break;
 		;
 		default:
-			alert("Default message");
+			document.getElementById('nHEAD').innerHTML = "Welkom bij Markplaatz.";
+			adjustLogin(0);
+			break;
 		;
 	}
 
+}
+
+/*Link naar inloggen of uitloggen veranderen*/
+function adjustLogin(status){
+	switch(status){
+		case 0:
+			document.getElementById('login').href = "login.php";
+			document.getElementById('login').innerHTML = "Inloggen";
+			break;
+		;
+		case 1:
+			document.getElementById('login').href = "logout.php";
+			document.getElementById('login').innerHTML = "Uitloggen";
+			break;
+		;
+	}
 }

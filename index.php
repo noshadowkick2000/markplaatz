@@ -27,7 +27,7 @@
 
   <body onload="cLoad();">
   	<div id="navi" class="container">
-      <img class="mx-auto" width="400" src="res/logo2.png">
+      <img class="mx-auto d-block" height="150" src="res/Market-Logo.png">
   		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
   		
   			 <ul class="nav navbar-nav navbar-left">
@@ -47,7 +47,7 @@
             <a class="nav-link" href="account.php">MijnMarktplaatz</a>
           </li>
           <li class="nav-item navbar-right">
-            <a class="nav-link" href="login.php">Login</a>
+            <a class="nav-link" id="login" href="login.php">Inloggen</a>
           </li>
   			</ul> 		
   		</nav>

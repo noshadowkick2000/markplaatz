@@ -20,7 +20,7 @@
 
   <body>
   	<div id="navi" class="container">
-      <img class="mx-auto" width="400" src="res/logo2.png">
+      <img class="mx-auto d-block" height="150" src="res/Market-Logo.png">
   		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
         <style>
                 a{
