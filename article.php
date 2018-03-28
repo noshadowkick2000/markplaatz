@@ -16,9 +16,27 @@
 	     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
        <meta charset="utf-8"> 
        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="script.js"></script>
+
+       <?php
+       session_start();
+          if (isset($_SESSION['STAGE'])){
+            $st = $_SESSION['STAGE'];
+          }else{
+            $st = "0";
+          }
+          if (isset($_SESSION['USRN'])){
+            $usrn = $_SESSION['USRN'];
+          }else{
+            $usrn = "";
+          }
+       ?>
+       <script>var stage = "<?= $st;?>"</script>
+       <script>var usrn = "<?= $usrn;?>"</script>
   </head>
 
-  <body>
+  <body onload="adjustLogin(Number(stage));">
+
 		<style>
                 a{
                   color:white;
@@ -46,7 +64,7 @@
             <a class="nav-link" href="#">MijnMarktplaatz</a>
           </li>
           <li class="nav-item navbar-right">
-            <a class="nav-link" href="login.php">Login</a>
+            <a class="nav-link" href="login.php" id="login">Login</a>
           </li>
   			</ul> 		
   		</nav>

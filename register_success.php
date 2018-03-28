@@ -46,7 +46,7 @@
             <a class="nav-link" href="#">MijnMarktplaatz</a>
           </li>
           <li class="nav-item navbar-right">
-            <a class="nav-link" href="login.php">Login</a>
+            <a class="nav-link" href="login.php" id="login">Login</a>
           </li>
   			</ul> 		
   		</nav>
