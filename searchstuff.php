@@ -131,23 +131,85 @@
 				<form method="POST" action="">
 					
 					<?php
+					
 						$servername = "azura.ga";
 						$username = "mark";
 						$password = "jd6320";
 						$dbname = "markplaatz";
 
 						// Create connection
-
-						$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
 						
-						$sql = 'SELECT * 
-								FROM aanbieding';
-								
+						$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
+						$naam=$_POST['zoektext'];
+						
+						$sql = "SELECT * FROM aanbieding WHERE AanbiedingID=-1 ";
+						
+						 
+						if ($_POST['Antiek'] == "1"){
 							
-		
+							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Antiek en Kunst'))";
+							
+							
+						}
+						
+						if ($_POST['verz'] == "2"){
+						
+							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Verzorging'))";
+							
+							
+						}
+						
+						if ($_POST['boek'] == "3"){
+							
+							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Boeken'))";
+							
+							
+						}
+						
+						if ($_POST['film'] == "4"){
+							
+							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Films en Muziek'))";
+							
+							
+						}
+						
+						if ($_POST['game'] == "5"){
+							
+							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Gaming'))";
+							
+							
+						}
+						
+						if ($_POST['auto'] == "6"){
+							
+							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Auto' ''' 's'))";
+							
+							
+						}
+						
+						if ($_POST['fiets'] == "7"){
+							
+							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Fietsen'))";
+							
+							
+							
+						}
+						
+						if ($_POST['6320'] == "8"){
+							
+							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Trekkers'))";
+							
+							
+							
+							
+						}
+						
+						
+						
+						
 						$query = mysqli_query($conn, $sql);
 
-						if (!$query) {
+						if (!$query){
 							die ('SQL Error: ' . mysqli_error($conn));
 						}
 ?>
