@@ -102,140 +102,73 @@
 				<button class="btn btn-success" type="submit">Zoeken</button>
 			</form>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-9">
 			<H3>Resultaten</H3> 
+			
+			
           <div class="table-responsive-xl" style="overflow-x:auto;">
           <table class="table">
            
             <tbody>
-              <tr>
-                <th>
-                  <div class="card" style="width:170px;">
-                    <div class="card-header"><h6 class="card-title">John Deere 6320</h6></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"></div>
-                    <div class="card-footer">
-                      <form action="article.php"  style="width:50px;">
-                        <input class="btn btn-danger" type="submit" value="Artikel bekijken"/>
-                      </form>
-                    </div>
-                  </div>
-                </th>
-				<th>
-                  <div class="card" style="width:170px;">
-                    <div class="card-header"><h6 class="card-title">John Deere 6320</h6></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"></div>
-                    <div class="card-footer">
-                      <form action="article.php"  style="width:50px;">
-                        <input class="btn btn-danger" type="submit" value="Artikel bekijken"/>
-                      </form>
-                    </div>
-                  </div>
-                </th>
-				<th>
-                  <div class="card" style="width:170px;">
-                    <div class="card-header"><h6 class="card-title">John Deere 6320</h6></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"></div>
-                    <div class="card-footer">
-                      <form action="article.php"  style="width:50px;">
-                        <input class="btn btn-danger" type="submit" value="Artikel bekijken"/>
-                      </form>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-            </tbody>
-          </table>   
-          </div>
-
-
-		</div>
-		
-		<div class="col-sm-3"> <!--TRENDING-->
-		<H3 class="">Trending</H3> 
-			<div class="table"  style="overflow-x:auto;">
-			<table class="table">
-           
-			<tbody>
 			
-              <tr>
-                <th>
-                  <div class="card" style="width:170px;">
-                    <div class="card-header"><h6 class="card-title">John Deere 6320</h6></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"></div>
-                    <div class="card-footer">
-                      <form action="article.php"  style="width:50px;">
-                        <input class="btn btn-danger" type="submit" value="Artikel bekijken"/>
-                      </form>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-			  
-			  <tr>
-                <th>
-                  <div class="card" style="width:170px;">
-                    <div class="card-header"><h6 class="card-title">John Deere 6320</h6></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"></div>
-                    <div class="card-footer">
-                      <form action="article.php"  style="width:50px;">
-                        <input class="btn btn-danger" type="submit" value="Artikel bekijken"/>
-                      </form>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-			  
-			  <tr>
-                <th>
-                  <div class="card" style="width:170px;">
-                    <div class="card-header"><h6 class="card-title">John Deere 6320</h6></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"></div>
-                    <div class="card-footer">
-                      <form action="article.php"  style="width:50px;">
-                        <input class="btn btn-danger" type="submit" value="Artikel bekijken"/>
-                      </form>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-			  
-			  <tr>
-                <th>
-                  <div class="card" style="width:170px;">
-                    <div class="card-header"><h6 class="card-title">John Deere 6320</h6></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"></div>
-                    <div class="card-footer">
-                      <form action="article.php"  style="width:50px;">
-                        <input class="btn btn-danger" type="submit" value="Artikel bekijken"/>
-                      </form>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-			  
-			  <tr>
-                <th>
-                  <div class="card" style="width:170px;">
-                    <div class="card-header"><h6 class="card-title">John Deere 6320</h6></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"></div>
-                    <div class="card-footer">
-                      <form action="article.php"  style="width:50px;">
-                        <input class="btn btn-danger" type="submit" value="Artikel bekijken"/>
-                      </form>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-			  
-			  
-            </tbody>
-          </table>   
-			</div>
-		</div>
-		
-	  </div>
-    </div>
+			<tr>
+				<form method="POST" action="">
+					
+					<?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
 
-  	
+						// Create connection
+
+						$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
+						$sql = 'SELECT * 
+								FROM aanbieding';
+								
+							
+		
+						$query = mysqli_query($conn, $sql);
+
+						if (!$query) {
+							die ('SQL Error: ' . mysqli_error($conn));
+						}
+?>
+					
+	
+	<table class="data-table">
+		
+		
+		<tbody>
+		<?php
+		$no 	= 1;
+		while ($row = mysqli_fetch_array($query))
+		{
+			
+			ECHO '<tr>
+                  <div class="card" style="width:750px;">
+                    <div class="card-header"><h2 class="card-title">Naam: '.$row['NaamAanbieding']. ', Artikel ID: '.$no.'</h2></div>
+                    <div class="card-body"><h5 class="card-title">Datum Geplaatst: '.date('F d, Y', strtotime($row['Datum'])).'
+					<br>Categorie: '.$row['Categorie'].'
+					<br>Status: '.$row['Status'].'
+					<br>Prijs: '.$row['Prijs'].'</h5></div>
+                    <div class="card-footer">
+						<a href="article.php"><Font color="blue">Artikel Bekijken</font></a>
+                    </div>
+                  </div>
+             </tr>';
+			 $no++;
+			
+		}?>
+		</tbody>
+		
+	</table>
+
+					
+				</form>
   </body>
+  
 </html>
+
+
