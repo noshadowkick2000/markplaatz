@@ -80,8 +80,8 @@
 		 <img class="card-img-top" src="http://arrkenterprises.com/wp-content/uploads/2015/02/empty-profile-pic.png">
 		
 		<div class="card-body">
-		<h4 id="">Jan Deer</h4>
-		<p id="">Jan Deer is op zoek naar trekkers, kan jij hem helpen?</p>
+		<h4 id="nHead"><?php echo htmlspecialchars($usrn); ?></h4>
+		<p id="nHead"><?php echo htmlspecialchars($usrn); ?> is op zoek naar trekkers, kan jij hem helpen?</p>
 		</div>
 		</div>
 		</div>		

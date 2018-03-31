@@ -142,7 +142,10 @@
 						$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
 						$naam=$_POST['zoektext'];
 						
+						if ($_POST['Antiek'] == "1" || $_POST['verz'] == "2" || $_POST['boek'] == "3" || $_POST['film'] == "4" || $_POST['game'] == "5" || $_POST['auto'] == "6" || $_POST['fiets'] == "7" || $_POST['6320'] == "8"){
+						
 						$sql = "SELECT * FROM aanbieding WHERE AanbiedingID=-1 ";
+						
 						
 						 
 						if ($_POST['Antiek'] == "1"){
@@ -203,7 +206,10 @@
 							
 							
 						}
-						
+						}
+						else{
+							$sql = "SELECT * FROM aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') ";
+						}
 						
 						
 						
