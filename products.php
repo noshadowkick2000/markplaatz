@@ -79,7 +79,7 @@
 	  <div class="row"><!--zoekbar-->
 		<div class="col-sm-3">
 			<H3>Zoeken</H3>
-			<form class="form" action="/searchstuff.php" method="post">
+			<form class="form" action="searchstuff.php" method="post">
 				<input class="form-control mr-sm-2" type="text" placeholder="zoek naar een artikel" name="zoektext">
 				<br>
 				<h5>Categorie</h5>
