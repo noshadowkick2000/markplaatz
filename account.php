@@ -31,10 +31,12 @@
           }else{
             $usrn = "";
           }
-       ?>
+		  ?>
+		  
        <script>var stage = "<?= $st;?>"</script>
        <script>var usrn = "<?= $usrn;?>"</script>
-  </head>
+
+	   </head>
 
   <body onload="adjustLogin(Number(stage));">
   	<div id="navi" class="container">
@@ -77,18 +79,278 @@
         <div class="col-sm-4"> 
         <div class="card">
 		<div class="card bg-dark text-white">
-		 <img class="card-img-top" src="http://arrkenterprises.com/wp-content/uploads/2015/02/empty-profile-pic.png">
-		
+		<img class="card-img-top" id=avatar src="http://arrkenterprises.com/wp-content/uploads/2015/02/empty-profile-pic.png">
+		<script>document.getElementById("avatar").src = "img/".$usrn.".jpg" </script>
 		<div class="card-body">
 		<h4 id="nHead"><?php echo htmlspecialchars($usrn); ?></h4>
-		<p id="nHead"><?php echo htmlspecialchars($usrn); ?> is op zoek naar trekkers, kan jij hem helpen?</p>
+		
+		<?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT Email FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["Email"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$mail = "Dit persoon heeft nog geen mailadres toegevoegd";
+						}else{
+						$mail = $res;
+						}
+						
+						if (!$sql) {
+							die ('SQL Error: ' . mysqli_error($conn));
+						}
+						
+						$conn->close();
+						
+		?>
+		
+		<p id="nHead"><?php echo htmlspecialchars($mail); ?></p>
 		</div>
 		</div>
 		</div>		
           
         </div>
 		<div class="col-sm-8"> 
-        <p><h5 id="" class="p-3" style="background-color:#d0dbd8; border-radius:0.25vw;">Dit is een kleine bio</h5></p>
+		
+				<?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT Beschrijvinglang FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["Beschrijvinglang"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$bio = "Dit persoon heeft nog geen beschrijving geschreven";
+						}else{
+						$bio = $res;
+						}
+						
+						if (!$sql) {
+							die ('SQL Error: ' . mysqli_error($conn));
+						}
+						
+						$conn->close();
+						
+		?>
+
+		
+        <p><h5 class="p-3" style="background-color:#d0dbd8; border-radius:0.25vw;"><?php echo htmlspecialchars($bio); ?></h5></p>
+		
+		<?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT Straat, Huisnummer, Woonplaats FROM akkount WHERE Username='" . $usrn . "'";
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["Straat"] . "+" . $row["Huisnummer"] . "+" . $row["Woonplaats"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$locurl = "https://www.google.com/maps/embed/v1/place?key=AIzaSyB0Ikoh_UKItvr1s7HdKfZgazuUMAMGa9g&q=nederland";
+						}else{
+						$locurl = "https://www.google.com/maps/embed/v1/place?key=AIzaSyB0Ikoh_UKItvr1s7HdKfZgazuUMAMGa9g&q=" . $res;
+						}
+						
+						if (!$sql) {
+							die ('SQL Error: ' . mysqli_error($conn));
+						}
+						
+						$conn->close();
+						
+		?>
+
+	   <script>var locurl = "<?= $locurl;?>"</script>
+		
+		<iframe id=location class="col-sm-12"
+		width="600"
+		height="450"
+		frameborder="0" style="border:0" allowfullscreen>
+		</iframe>
+		<script>document.getElementById("location").src = locurl;</script>
+				
+          <div class="table-responsive-xl" style="overflow-x:auto;">
+          <table class="table">
+           
+            <tbody>
+			
+			<tr>
+				<form method="POST" action="">
+				
+				<?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT UserID FROM akkount WHERE Username='" . $usrn . "'";
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["UserID"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$uid = NULL;
+						}else{
+						$uid = $res;
+						}
+						
+						if (!$sql) {
+							die ('Dit persoon heeft nog geen artikelen aangeboden');
+						}
+						
+						$conn->close();
+						
+		?>
+					
+					<?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
+						$sql = "SELECT * FROM aanbieding WHERE AanbiederID=" . $uid;
+								
+							
+		
+						$query = mysqli_query($conn, $sql);
+
+						if (!$query) {
+							die ('SQL Error: ' . mysqli_error($conn));
+						}
+?>
+					
+	
+	<table class="data-table">
+		
+		
+		<tbody>
+		<?php
+	// Zorgt voor een Array, waardoor ieder zoekresultaat afzondeerlijk te bekijken is
+		while ($row = mysqli_fetch_array($query))
+		{
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn2 = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
+						// Query om weer te geven wie een aanbieding geplaatst heeft, door deze vervolgens te combineren met een array
+						$sql2 = 'SELECT Username
+								FROM akkount 
+								WHERE UserID='.$row['AanbiederID'].'';
+								
+							
+		
+						$query2 = mysqli_query($conn2, $sql2);
+
+						if (!$query2) {
+							die ('SQL Error: ' . mysqli_error($conn2));
+						}
+						
+						$result = mysqli_query ($conn2, $sql2);
+						
+						
+						while ($id = mysqli_fetch_assoc($result)){
+							
+							// Hier wordt een tabel gemaakt met waarden uit de database, tot dat alle waarden gebruikt zijn.
+			ECHO 			'<tr>
+							<div class="card" style="width:750px;">
+							<div class="card-header"><h2 class="card-title">Naam: '.$row['NaamAanbieding']. ', Artikel ID: '.$row['AanbiedingID'].'</h2></div>
+							<div class="card-body">
+							<div style="float:right; object-fit: contain; width:250px;"><img class="card-img-top" src="prodimg/'.$row['AanbiedingID'].'.jpg"></div>
+							<h5 class="card-title">Datum Geplaatst: '.date('F d, Y', strtotime($row['Datum'])).'
+							
+							<br>Categorie: '.$row['Categorie'].'
+							<br>Status: '.$row['Status'].'
+							<br>Prijs: €'.$row['Prijs'].
+							//$id is een de array waar de gebruikersnaam op wordt gehaald door een waarde die gekoppeld is aan de aanbieding database 
+							'<br>Geplaatst Door: '.$id['Username'].'</h5>
+							
+							</div>
+							
+							<div class="card-footer">
+							<a href="article.php?id='.$row['AanbiedingID'].'"><Font color="blue">Artikel Bekijken</font></a>
+							</div>
+							<input type="hidden" name='.$row['NaamAanbieding'].' value='.$row['AanbiedingID'].'/>
+							
+							</div>
+							
+							</tr>
+							<br>';
+			 
+						}
+		}?>
+		</tbody>
+		
+	</table>
+		
 		</div> 
       </div>
       
@@ -107,5 +369,7 @@
       <p>© Team Anime 2018</p>
       
     </div>
+	
+	<!-- test area -->
 
 </html>
