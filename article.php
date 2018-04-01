@@ -126,7 +126,7 @@
             <br>
             <h4 id="ART-prijs">€'.$row['Prijs'].';</h4>
           </div>
-          <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br></div>
+          <div class="card-body"><img class="card-img-top" src="prodimg/'.$row['AanbiedingID'].'.jpg"><br><br></div>
           <div class="card-footer">
             <h4>Beschrijving</h4>
             <p id="ART-des">'.$row['Beschrijving'].'</p>
