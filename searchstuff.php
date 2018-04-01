@@ -229,21 +229,52 @@
 		
 		while ($row = mysqli_fetch_array($query))
 		{
-			
-			ECHO '<tr>
-                  <div class="card" style="width:750px;">
-                    <div class="card-header"><h2 class="card-title">Naam: '.$row['NaamAanbieding']. ', Artikel ID: '.$row['AanbiedingID'].'</h2></div>
-                    <div class="card-body"><h5 class="card-title">Datum Geplaatst: '.date('F d, Y', strtotime($row['Datum'])).'
-					<br>Categorie: '.$row['Categorie'].'
-					<br>Status: '.$row['Status'].'
-					<br>Prijs: '.$row['Prijs'].'</h5></div>
-                    <div class="card-footer">
-						<a href="article.php"><Font color="blue">Artikel Bekijken</font></a>
-                    </div>
-                  </div>
-             </tr>';
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn2 = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
+						$sql2 = 'SELECT Username
+								FROM akkount 
+								WHERE UserID='.$row['AanbiederID'].'';
+								
+							
+		
+						$query2 = mysqli_query($conn2, $sql2);
+
+						if (!$query2) {
+							die ('SQL Error: ' . mysqli_error($conn2));
+						}
+						
+						$result = mysqli_query ($conn2, $sql2);
+						
+						while ($id = mysqli_fetch_assoc($result)){
+							
+						
+						
+						ECHO '<tr>
+							<div class="card" style="width:750px;">
+							<div class="card-header"><h2 class="card-title">Naam: '.$row['NaamAanbieding']. ', Artikel ID: '.$row['AanbiedingID'].'</h2></div>
+							<div class="card-body"><h5 class="card-title">Datum Geplaatst: '.date('F d, Y', strtotime($row['Datum'])).'
+							<br>Categorie: '.$row['Categorie'].'
+							<br>Status: '.$row['Status'].'
+							<br>Prijs: €'.$row['Prijs'].'
+							<br>Geplaatst Door: '.$id['Username'].'</h5></div>
+							<div class="card-footer">
+							<a href="article.php"><Font color="blue">Artikel Bekijken</font></a>
+							</div>
+							<input type="hidden" name='.$row['NaamAanbieding'].' value='.$row['AanbiedingID'].'/>
+							</div>
+							</tr>
+							<br>';
 			 
-			
+						}
+			 
+						
 		}?>
 		</tbody>
 		
