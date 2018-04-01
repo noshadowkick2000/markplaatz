@@ -226,13 +226,13 @@
 		
 		<tbody>
 		<?php
-		$no 	= 1;
+		
 		while ($row = mysqli_fetch_array($query))
 		{
 			
 			ECHO '<tr>
                   <div class="card" style="width:750px;">
-                    <div class="card-header"><h2 class="card-title">Naam: '.$row['NaamAanbieding']. ', Artikel ID: '.$no.'</h2></div>
+                    <div class="card-header"><h2 class="card-title">Naam: '.$row['NaamAanbieding']. ', Artikel ID: '.$row['AanbiedingID'].'</h2></div>
                     <div class="card-body"><h5 class="card-title">Datum Geplaatst: '.date('F d, Y', strtotime($row['Datum'])).'
 					<br>Categorie: '.$row['Categorie'].'
 					<br>Status: '.$row['Status'].'
@@ -242,7 +242,7 @@
                     </div>
                   </div>
              </tr>';
-			 $no++;
+			 
 			
 		}?>
 		</tbody>
