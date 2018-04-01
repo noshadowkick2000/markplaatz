@@ -41,7 +41,7 @@
 
   <body onload="cLoad();">
   	<div id="navi" class="container">
-      <img class="mx-auto d-block" height="150" src="res/Market-Logo.png">
+      <a href="index.php"><img class="mx-auto d-block" height="150" src="res/Market-Logo.png"></a>
   		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
   		
   			 <ul class="nav navbar-nav navbar-left">
@@ -115,7 +115,7 @@
 
   <br><br><br><br>
     <div class="container">
-      <img  width="200" src="res/logo2.png">
+      <img  width="50px" src="res/market-logo.png" style="float:left;">
       <h5>Praktische opdracht informatica</h5>
       <h6><i>Gemaakt door  Twan Holtrop, Krishan Jokhan, Sander Koning, Jesper Kussendrager, Coen van Wieringen en Tim Yeung.</i></h6>
     </div>
