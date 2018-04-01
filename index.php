@@ -210,8 +210,6 @@
       <img  width="200" src="res/logo2.png">
       <h5>Praktische opdracht informatica</h5>
       <h6><i>Gemaakt door  Twan Holtrop, Krishan Jokhan, Sander Koning, Jesper Kussendrager, Coen van Wieringen en Tim Yeung.</i></h6>
-      <p>© Team Anime 2018</p>
-      
     </div>
     
     
