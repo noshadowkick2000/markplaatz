@@ -77,31 +77,59 @@
 	  
 
 <br><br>
-    <div class="container">
-      
+	<?php
+	$id = $_GET['id'];
+	
+	$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
+						$sql = 'SELECT * 
+								FROM aanbieding
+								INNER JOIN akkount ON aanbieding.AanbiederID=akkount.UserID
+								WHERE aanbieding.AanbiedingID='.$id.'';
+								
+							
+		
+						$query = mysqli_query($conn, $sql);
+
+						if (!$query) {
+							die ('SQL Error: ' . mysqli_error($conn));
+						}
+						
+					
+						while ($row = mysqli_fetch_array($query))
+		{
+	
+    echo '<div class="container">
+    
     <div class="row">
       <div class="col-sm-8">
         <div class="card" >
 
           <div class="card-header">
 
-            <h3 class="card-title">Artikel</h3>
+            <h3 class="card-title">'.$row['NaamAanbieding'].'</h3>
 
             <ul class="list-inline">
-              <li class="list-inline-item" id="ART-xgezien"> keer gezien</li>
-              <li class="list-inline-item" id="ART-xbewaard"> keer bewaard</li>
-              <li class="list-inline-item" id="ART-dat">toegevoegd op</li>
+              
+              <li class="list-inline-item" id="ART-dat">toegevoegd op: '.date('F d, Y', strtotime($row['Datum'])).'</li>
             </ul>
 
             
-            <button type="button" class="btn btn-danger">Bewaren</button>
-            <br><br><br>
-            <h4 id="ART-prijs">€[P]</h4>
+            
+            <br>
+            <h4 id="ART-prijs">€'.$row['Prijs'].';</h4>
           </div>
           <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br></div>
           <div class="card-footer">
             <h4>Beschrijving</h4>
-            <p id="ART-des">...</p>
+            <p id="ART-des">'.$row['Beschrijving'].'</p>
             <button type="button" class="btn btn-danger">Artikel delen</button>
 
           </div>
@@ -114,24 +142,26 @@
         <br><br><br>
         <div class="card" >
           <div class="card-header">
-            <h4 id="ART-usr">Geplaatst door [ART-usr]</h4>
-            <p id="ART-usr-startDAT">lid sinds [ART-usr-startDAT]</p>
+            <h4 id="ART-usr">Geplaatst door '.$row['Username'].'</h4>
+            <p id="ART-usr-startDAT">lid sinds '.date('F d, Y', strtotime($row['DatumReg'])).'</p>
           </div>
-          <div class="card-body"> <!-- safety information -->
-            <p>uit [ART-usr-LOC]</p>
+		  
+          <div class="card-footer"> <!-- safety information -->
+            <p>Adres: '.$row['Woonplaats'].'<br> '.$row['Straat'].' '.$row['Huisnummer'].''.$row['Toevoeging'].'<br>'.$row['PostcodeNUM'].''.$row['PostcodeLT'].'</p>
           </div>
           <div class="card-footer">
             <button type="button" class="btn btn-danger">Naar profielpagina</button>
             <br>
-            <button type="button" class="btn btn-danger">Stuur bericht</button>
+            <button type="button" class="btn btn-danger"><a href="mailto:'.$row['Email'].'">Stuur bericht</button>
             <button type="button" class="btn btn-danger">Toon telefoonnummer</button>
           </div>
         </div>
       </div>
     </div>
       
-    </div>
-
+    </div>';
+		}
+	?>
   	
   </body>
 </html>

@@ -192,14 +192,17 @@
 			ECHO 			'<tr>
 							<div class="card" style="width:750px;">
 							<div class="card-header"><h2 class="card-title">Naam: '.$row['NaamAanbieding']. ', Artikel ID: '.$row['AanbiedingID'].'</h2></div>
-							<div class="card-body"><h5 class="card-title">Datum Geplaatst: '.date('F d, Y', strtotime($row['Datum'])).'
+							<div class="card-body">
+							<div style="float:right;width:250px; height:250px;"><img class="card-img-top" src="res/test-img.png"></div>
+							<h5 class="card-title">Datum Geplaatst: '.date('F d, Y', strtotime($row['Datum'])).'
+							
 							<br>Categorie: '.$row['Categorie'].'
 							<br>Status: '.$row['Status'].'
 							<br>Prijs: €'.$row['Prijs'].
 							//$id is een de array waar de gebruikersnaam op wordt gehaald door een waarde die gekoppeld is aan de aanbieding database 
 							'<br>Geplaatst Door: '.$id['Username'].'</h5></div>
 							<div class="card-footer">
-							<a href="article.php"><Font color="blue">Artikel Bekijken</font></a>
+							<a href="article.php?id='.$row['AanbiedingID'].'"><Font color="blue">Artikel Bekijken</font></a>
 							</div>
 							<input type="hidden" name='.$row['NaamAanbieding'].' value='.$row['AanbiedingID'].'/>
 							</div>
