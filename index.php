@@ -31,6 +31,12 @@
        ?>
        <script>var stage = "<?= $st;?>"</script>
        <script>var usrn = "<?= $usrn;?>"</script>
+
+       <style>
+                a{
+                  color:white;
+                }
+              </style>
   </head>
 
   <body onload="cLoad();">
@@ -97,107 +103,9 @@
         <div class="col-sm-8">
 
           <H3>Recent geplaatst</H3>
-          <div class="table-responsive-xl" style="overflow-x:auto;">
-          <table class="table">
-           
-            <tbody>
-              <tr>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">John Deere 6320</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer">
-                      <form action="article.php">
-                        <input class="btn btn-danger" type="submit" value="Artikel bekijken"/>
-                      </form>
-                    </div>
-                  </div>
-                </th>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">Artikel</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer"><button type="button" class="btn btn-danger">Artikel bekijken</button></div>
-                  </div>
-                </th>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">Artikel</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer"><button type="button" class="btn btn-danger">Artikel bekijken</button></div>
-                  </div>
-                </th>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">Artikel</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer"><button type="button" class="btn btn-danger">Artikel bekijken</button></div>
-                  </div>
-                </th>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">Artikel</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer"><button type="button" class="btn btn-danger">Artikel bekijken</button></div>
-                  </div>
-                </th>
-
-              </tr>
-
-            </tbody>
-          </table>   
-          </div>
-
-
-
-          <H3>Aanbevolen voor u</H3>
-          <div class="table-responsive-xl" style="overflow-x:auto;">
-          <table class="table">
-           
-            <tbody>
-              <tr>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">John Deere 6320</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer"><button type="button" class="btn btn-danger">Artikel bekijken</button></div>
-                  </div>
-                </th>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">Artikel</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer"><button type="button" class="btn btn-danger">Artikel bekijken</button></div>
-                  </div>
-                </th>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">Artikel</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer"><button type="button" class="btn btn-danger">Artikel bekijken</button></div>
-                  </div>
-                </th>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">Artikel</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer"><button type="button" class="btn btn-danger">Artikel bekijken</button></div>
-                  </div>
-                </th>
-                <th>
-                  <div class="card" style="width:200px">
-                    <div class="card-header"><h4 class="card-title">Artikel</h4></div>
-                    <div class="card-body"><img class="card-img-top" src="res/test-img.png"><br><br><p class="card-text">Helemaal goed</p></div>
-                    <div class="card-footer"><button type="button" class="btn btn-danger">Artikel bekijken</button></div>
-                  </div>
-                </th>
-
-              </tr>
-
-            </tbody>
-          </table>   
-          </div>
-        </div>
+          		<?php
+          			include 'recentgeplaatst.php';
+          		?>
         
       </div>
       
