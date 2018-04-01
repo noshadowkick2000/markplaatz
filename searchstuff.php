@@ -140,14 +140,17 @@
 						// Create connection
 						
 						$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
 						$naam=$_POST['zoektext'];
 						
+						// als er een een van de checkboxes aangevinkt is wordt de sql samengesteld volgens onderstaande code.
 						if ($_POST['Antiek'] == "1" || $_POST['verz'] == "2" || $_POST['boek'] == "3" || $_POST['film'] == "4" || $_POST['game'] == "5" || $_POST['auto'] == "6" || $_POST['fiets'] == "7" || $_POST['6320'] == "8"){
-						
+						// er komt door deze query nog geen resultaat aan bod, waardoor er makkelijk een OR statement aan te koppelen is
 						$sql = "SELECT * FROM aanbieding WHERE AanbiedingID=-1 ";
 						
-						
-						 
+						// Als de categorie Antiek en Kunst aangevinkt is, wordt
+						// het volgende stuk code wordt aan de waarde $sql toegevoegd, er wordt gezocht welke waarden in deze categorie
+						// voorkomen die ook voldoen aan de zoektekst. Vervolgens worden deze waarden toegevoegd aan alle resultaten
 						if ($_POST['Antiek'] == "1"){
 							
 							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Antiek en Kunst'))";
@@ -155,6 +158,7 @@
 							
 						}
 						
+						// zelfde als kunst en antiek, maar dan met verzorging
 						if ($_POST['verz'] == "2"){
 						
 							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Verzorging'))";
@@ -162,6 +166,7 @@
 							
 						}
 						
+						//idem
 						if ($_POST['boek'] == "3"){
 							
 							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Boeken'))";
@@ -169,6 +174,7 @@
 							
 						}
 						
+						//idem
 						if ($_POST['film'] == "4"){
 							
 							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Films en Muziek'))";
@@ -176,6 +182,7 @@
 							
 						}
 						
+						//idem
 						if ($_POST['game'] == "5"){
 							
 							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Gaming'))";
@@ -183,6 +190,7 @@
 							
 						}
 						
+						//idem
 						if ($_POST['auto'] == "6"){
 							
 							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Auto' ''' 's'))";
@@ -190,6 +198,7 @@
 							
 						}
 						
+						//idem
 						if ($_POST['fiets'] == "7"){
 							
 							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Fietsen'))";
@@ -198,6 +207,7 @@
 							
 						}
 						
+						//idem
 						if ($_POST['6320'] == "8"){
 							
 							$sql .= "OR AanbiedingID IN(SELECT AanbiedingID FROM Aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') AND (categorie='Trekkers'))";
@@ -207,6 +217,10 @@
 							
 						}
 						}
+						
+						// Als er geen categoriën geselecteerd zijn bestaat de query alleen uit zoeken op resultaten die overeen komen met de zoektekst
+						// Bij gebruik van "SELECT * FROM aanbieding WHERE AanbiedingID=-1 " zouden er namelijk geen resultaten te voorschijn komen als 
+						// er geen categoriën geselecteerd waren.
 						else{
 							$sql = "SELECT * FROM aanbieding WHERE (NaamAanbieding LIKE '%" . $naam . "%') ";
 						}
@@ -226,7 +240,7 @@
 		
 		<tbody>
 		<?php
-		
+		// Zelfde als in products.php, maar dan met de resultaten van de zoek query
 		while ($row = mysqli_fetch_array($query))
 		{
 						$servername = "azura.ga";
