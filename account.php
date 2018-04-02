@@ -79,8 +79,9 @@
         <div class="col-sm-4"> 
         <div class="card">
 		<div class="card bg-dark text-white">
-		<img class="card-img-top" id=avatar src="http://arrkenterprises.com/wp-content/uploads/2015/02/empty-profile-pic.png">
-		<script>document.getElementById("avatar").src = "img/".$usrn.".jpg" </script>
+		<?php
+		echo '<img class="card-img-top" src= "img/' . $usrn . '.jpg" id=avatar>';
+		?>
 		<div class="card-body">
 		<h4 id="nHead"><?php echo htmlspecialchars($usrn); ?></h4>
 		
@@ -169,7 +170,7 @@
 		?>
 
 		
-        <p><h5 class="p-3" style="background-color:#d0dbd8; border-radius:0.25vw;"><?php echo htmlspecialchars($bio); ?></h5></p>
+        <p><h6 class="p-3" style="background-color:#d0dbd8; border-radius:0.25vw;"><?php echo htmlspecialchars($bio); ?></h6></p>
 		
 		<?php
 						$servername = "azura.ga";
