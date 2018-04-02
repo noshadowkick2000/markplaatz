@@ -63,7 +63,7 @@
      			<a class="nav-link" href="Forum.php">Forum</a>
     	  </li>
     	  <li>
-            	<a class="nav-link" href="#">MijnMarkplaatz bewerken</a>
+            	<a class="nav-link" href="bewerkaccount.php">MijnMarkplaatz bewerken</a>
           </li>
 
           <li class="nav-item navbar-right">
@@ -80,7 +80,7 @@
         <div class="card">
 		<div class="card bg-dark text-white">
 		<?php
-		echo '<img class="card-img-top" src= "img/' . $usrn . '.jpg" id=avatar>';
+		echo '<img alt="" class="card-img-top" src= "img/' . $usrn . '.jpg" id=avatar>';
 		?>
 		<div class="card-body">
 		<h4 id="nHead"><?php echo htmlspecialchars($usrn); ?></h4>
@@ -113,10 +113,6 @@
 						$mail = "Dit persoon heeft nog geen mailadres toegevoegd";
 						}else{
 						$mail = $res;
-						}
-						
-						if (!$sql) {
-							die ('SQL Error: ' . mysqli_error($conn));
 						}
 						
 						$conn->close();
@@ -161,10 +157,6 @@
 						$bio = $res;
 						}
 						
-						if (!$sql) {
-							die ('SQL Error: ' . mysqli_error($conn));
-						}
-						
 						$conn->close();
 						
 		?>
@@ -199,10 +191,6 @@
 						$locurl = "https://www.google.com/maps/embed/v1/place?key=AIzaSyB0Ikoh_UKItvr1s7HdKfZgazuUMAMGa9g&q=nederland";
 						}else{
 						$locurl = "https://www.google.com/maps/embed/v1/place?key=AIzaSyB0Ikoh_UKItvr1s7HdKfZgazuUMAMGa9g&q=" . $res;
-						}
-						
-						if (!$sql) {
-							die ('SQL Error: ' . mysqli_error($conn));
 						}
 						
 						$conn->close();
@@ -279,9 +267,6 @@
 		
 						$query = mysqli_query($conn, $sql);
 
-						if (!$query) {
-							die ('SQL Error: ' . mysqli_error($conn));
-						}
 ?>
 					
 	
@@ -291,8 +276,11 @@
 		<tbody>
 		<?php
 	// Zorgt voor een Array, waardoor ieder zoekresultaat afzondeerlijk te bekijken is
-		while ($row = mysqli_fetch_array($query))
-		{
+	if ($query == null){
+		echo "Dit persoon heeft nog geen artikelen geplaatst";
+	}
+	Else {
+		while ($row = mysqli_fetch_array($query)){
 						$servername = "azura.ga";
 						$username = "mark";
 						$password = "jd6320";
@@ -310,12 +298,10 @@
 							
 		
 						$query2 = mysqli_query($conn2, $sql2);
-
-						if (!$query2) {
-							die ('SQL Error: ' . mysqli_error($conn2));
-						}
 						
 						$result = mysqli_query ($conn2, $sql2);
+						
+					
 						
 						
 						while ($id = mysqli_fetch_assoc($result)){
@@ -347,7 +333,9 @@
 							<br>';
 			 
 						}
-		}?>
+		}
+	}
+		?>
 		</tbody>
 		
 	</table>
