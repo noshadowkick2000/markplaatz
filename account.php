@@ -63,7 +63,12 @@
      			<a class="nav-link" href="Forum.php">Forum</a>
     	  </li>
     	  <li>
-            	<a class="nav-link" href="bewerkaccount.php">MijnMarkplaatz bewerken</a>
+            	<a class="nav-link" id=bewerk href="bewerkaccount.php">MijnMarkplaatz bewerken</a>
+				<script>
+				if (stage == "0"){
+					document.getElementById("bewerk").href = "#";
+				}
+				</script>
           </li>
 
           <li class="nav-item navbar-right">
