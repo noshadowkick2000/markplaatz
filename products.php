@@ -82,6 +82,23 @@
 			<form class="form" action="searchstuff.php" method="post">
 				<input class="form-control mr-sm-2" type="text" placeholder="zoek naar een artikel" name="zoektext">
 				<br>
+				
+				<h5>
+
+							Sorteren op:
+
+						<select name="formSort">
+
+						<option value="AanbiedingID ASC">Oud -> Nieuw</option>
+						<option value="AanbiedingID DESC">Nieuw -> Oud</option>
+						<option value="Prijs ASC">Prijs Oplopend</option>
+
+						<option value="Prijs DESC">Prijs Aflopend</option>
+
+					</select>
+				</h5>
+
+				
 				<h5>Categorie</h5>
 				<input type="hidden" name="Antiek" value="0"/>
 				<label class="form-check-label"> 
