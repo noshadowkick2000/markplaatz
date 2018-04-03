@@ -115,7 +115,7 @@
 						}
 						
 						if ($res == NULL){
-						$mail = "Dit persoon heeft nog geen mailadres toegevoegd";
+						$mail = "Deze persoon heeft nog geen mailadres toegevoegd";
 						}else{
 						$mail = $res;
 						}
@@ -157,7 +157,7 @@
 						}
 						
 						if ($res == NULL){
-						$bio = "Dit persoon heeft nog geen beschrijving geschreven";
+						$bio = "Deze persoon heeft nog geen beschrijving geschreven";
 						}else{
 						$bio = $res;
 						}
@@ -249,7 +249,7 @@
 						}
 						
 						if (!$sql) {
-							die ('Dit persoon heeft nog geen artikelen aangeboden');
+							die ('Deze persoon heeft nog geen artikelen aangeboden');
 						}
 						
 						$conn->close();
@@ -282,7 +282,7 @@
 		<?php
 	// Zorgt voor een Array, waardoor ieder zoekresultaat afzondeerlijk te bekijken is
 	if ($query == null){
-		echo "Dit persoon heeft nog geen artikelen geplaatst";
+		echo "Deze persoon heeft nog geen artikelen geplaatst";
 	}
 	Else {
 		while ($row = mysqli_fetch_array($query)){
