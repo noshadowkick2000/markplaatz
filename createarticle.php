@@ -121,9 +121,16 @@
 	
 							}
 							
+							$sql2='SELECT UserID FROM akkount WHERE Username=\''.$usrn.'\'';
+							$query2 = mysqli_query($conn, $sql2);
+							echo $sql2;
+							while ($row = mysqli_fetch_assoc($query2)){
+								$userid=$row['UserID'];
+							}
+							
 							if (!empty($_FILES["fileToUpload"])){
 							$target_dir = "tempimg/";
-							$target_file = $target_dir . $maxID . '.jpg';
+							$target_file = $target_dir . $maxID . '.'.$userid.'.jpg';
 							$uploadOk = 1;
 							$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 							// Check if image file is a actual image or fake image
