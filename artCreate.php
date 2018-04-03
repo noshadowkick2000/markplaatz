@@ -57,7 +57,7 @@ mysqli_query($conn, $sql);
 ?>
 
 						<?php
-							
+							if ($usrn !=""){ 
 							$servername = "azura.ga";
 							$username = "mark";
 							$password = "jd6320";
@@ -85,6 +85,9 @@ mysqli_query($conn, $sql);
 							$target_file = $_POST['file'];
 							echo $target_file;
 							rename ($target_file, "prodimg/$maxID.jpg");
+							}
+							
+							
 							header ('Location: index.php')
 							
 ?>
