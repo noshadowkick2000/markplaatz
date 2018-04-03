@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <title>Markplaatz - Home</title>
+  <title>Markplaatz - Inloggen</title>
   <head>
     	 <!-- Latest compiled and minified CSS -->
     	 
@@ -16,7 +16,7 @@
 	     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
        <meta charset="utf-8"> 
        <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script type="text/javascript" src="script.js"></script>
+       <script type="text/javascript" src="script.js"></script>
 
        <?php
        session_start();
@@ -37,14 +37,13 @@
 
   <body onload="adjustLogin(Number(stage));">
 
-  		<style>
+  <style>
                 a{
                   color:white;
                 }
               </style>
-   
-	 <div id="navi" class="container">
-      <a href="index.php"><img class="mx-auto d-block" height="150" src="res/Market-Logo.png"></a>
+	<div id="navi" class="container">
+      <img class="mx-auto d-block" height="150" src="res/Market-Logo.png">
   		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
   		
   			 <ul class="nav navbar-nav navbar-left">
@@ -71,65 +70,18 @@
   		<div class="alert alert-primary">
   			<strong>Melding </strong>.......
   		</div>
-  	</div> 
+  	</div>
+	  
 
 <br><br>
     <div class="container">
-      <div class="alert alert-danger">
-        <strong>Pas op! </strong>Deel uw informatie nooit met derden.
-      </div>
-      <h2>Account Bewerken</h2>
-      <br>
-      
-      <form action="bewerkaccountsql.php" method="post">
-      
-      <h5>Accountinformatie</h5>
-
-        <div class="form-group">
-          <label for="email">Emailadres* </label>
-          <input type="email" class="form-control" id="email" name="em">
-        </div>
-		<div class="form-group">
-          <input type="hidden" class="form-control" id="usr" name="un">
-		  <script>document.getElementById("usr").value = usrn;</script>
-        </div>
-        <div class="form-group">
-          <label for="pwd">Wachtwoord* </label>
-          <input type="password" class="form-control" id="pwd" name="pswd">
-        </div>
-
-
-        <h5>Algemene Informatie</h5>
-		
-		<div class="form-group">
-          <label for="street">Korte omschrijving </label>
-          <input type="text" class="form-control" id="bio" name="bio">
-        </div>
-		
-        <div class="form-group">
-          <label for="street">Straatnaam </label>
-          <input type="text" class="form-control" id="street" name="street">
-        </div>
-
-        <div class="form-group">
-          <label for="sNum">Huisnummer </label>
-          <input type="text" class="form-control" id="sNum" name="sn">
-        </div>
-
-        <div class="form-group">
-          <label for="postcode">Postcode </label>
-          <input type="text" class="form-control" id="postcode pst-num" name="pcc">
-          <input type="text" class="form-control" id="postcode pst-char" name="pcl">
-        </div>
-
-        <div class="form-group">
-          <label for="woonplaats">Woonplaats </label>
-          <input type="text" class="form-control" id="woonplaats" name="wp">
-        </div>
-
-       
-        <button type="submit" class="btn btn-danger">Account Bijwerken</button>
-      </form>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+		Select image to upload:
+		<input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="hidden" class="form-control" id="usr" name="un">
+		<script>document.getElementById("usr").value = usrn;</script>
+		<input type="submit" value="Upload Image" name="submit">
+	</form>
     </div>
 
   	

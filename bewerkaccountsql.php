@@ -12,6 +12,7 @@ $usrn = $_POST['un'];
 $email = $_POST['em'];
 
 //user location info
+$bio = $_POST['bio'];
 $straatnaam = $_POST['street'];
 $huisnummer = $_POST['sn']; //
 $postcodeNUM = $_POST['pcc']; //
@@ -28,7 +29,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error);
 } 
 
-$sql = "UPDATE akkount SET email='$email', wachtwoord ='$pw_hash', postcodelt='$postcodeCHAR', postcodenum='$postcodeNUM', huisnummer='$huisnummer', straat='$straatnaam', woonplaats='$woonplaats' WHERE username='$usrn'";
+$sql = "UPDATE akkount SET email='$email', wachtwoord ='$pw_hash', postcodelt='$postcodeCHAR', postcodenum='$postcodeNUM', huisnummer='$huisnummer', straat='$straatnaam', woonplaats='$woonplaats', beschrijvinglang='$bio' WHERE username='$usrn'";
 
 if (mysqli_query($conn, $sql)) {
     header("Location: index.php");
