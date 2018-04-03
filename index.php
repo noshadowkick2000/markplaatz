@@ -73,9 +73,10 @@
       </div>
       </div>
     <div class="container">
-      
+		<H6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br>commodo ligula eget dolor. Aenean massa.<br>Cum sociis natoque penatibus et magnis dis parturient montes,<br>nascetur ridiculus mus.</h6>
+		
         <BR>
-
+		
           <H3>Recent geplaatst</H3>
           <div class="table-responsive-xl" style="overflow-x:auto;">
           	<table class="table">
