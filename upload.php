@@ -20,11 +20,7 @@ if(isset($_POST["submit"])) {
         $uploadOk = 0;
     }
 }
-// Allow certain file formats
-if($imageFileType != "jpg") {
-    echo " Sorry, u kan alleen jpg bestanden uploaden";
-    $uploadOk = 0;
-}
+
 if ($uploadOk == 0) {
     echo " Sorry, uw bestand is niet geupload.";
 // if everything is ok, try to upload file
