@@ -334,16 +334,8 @@
 							
 							<div class="card-footer">
 
-							<button type="submit" class="btn btn-danger"><a href="article.php?id='.$row['AanbiedingID'].'"><Font color="white">Artikel Bekijken</font></a></button>
-							
-							
-							
-								<a href="deletearticle.php?id='.$row['AanbiedingID'].'"><Font color="Black"> Artikel verwijderen</font></a>
-							
-							
-
-							
-
+							<a href="article.php?id='.$row['AanbiedingID'].'"><Font color="white">Artikel Bekijken</font></a>
+							<a href="deletearticle.php?id='.$row['AanbiedingID'].'"><Font color="Black"> Artikel verwijderen</font></a>
 							</div>
 							<input type="hidden" name='.$row['NaamAanbieding'].' value='.$row['AanbiedingID'].'/>
 							
