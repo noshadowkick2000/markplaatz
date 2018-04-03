@@ -333,7 +333,7 @@
 							</div>
 							
 							<div class="card-footer">
-<<<<<<< HEAD
+
 							<button type="submit" class="btn btn-danger"><a href="article.php?id='.$row['AanbiedingID'].'"><Font color="white">Artikel Bekijken</font></a></button>
 							
 							
@@ -341,9 +341,9 @@
 								<a href="deletearticle.php?id='.$row['AanbiedingID'].'"><Font color="Black"> Artikel verwijderen</font></a>
 							
 							
-=======
-							<a href="article.php?id='.$row['AanbiedingID'].'"><Font color="blue">Artikel Bekijken</font></a>
->>>>>>> 8d0c2e80572239f272be2045644877b4f9f529e2
+
+							
+
 							</div>
 							<input type="hidden" name='.$row['NaamAanbieding'].' value='.$row['AanbiedingID'].'/>
 							
