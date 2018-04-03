@@ -119,8 +119,7 @@
 							$name = $row['Username'];
 						}
 							
-		
-		echo '<h4 id="nHead">'$name'</h4>';
+						echo '<h4 id="nHead">'.$name.'</h4>';
 		?>
 		
 		
