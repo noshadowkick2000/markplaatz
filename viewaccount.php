@@ -85,8 +85,34 @@
         <div class="card">
 		<div class="card bg-dark text-white">
 		<?php
+		
 		$id = $_GET['userid'];
-		echo '<img alt="" class="card-img-top" src= "img/' . $id . '.jpg">';
+		// Create connection
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+						$conn2 = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
+						// Query om weer te geven wie een aanbieding geplaatst heeft, door deze vervolgens te combineren met een array
+						$sql2 = 'SELECT Username
+								FROM akkount 
+								WHERE UserID='.$id.'';
+								
+							
+		
+						$query2 = mysqli_query($conn2, $sql2);
+
+						if (!$query2) {
+							die ('SQL Error: ' . mysqli_error($conn2));
+						}
+						
+						$result = mysqli_query ($conn2, $sql2);
+						
+						
+						while ($row = mysqli_fetch_assoc($result)){
+							$name = $row['Username'];
+		echo '<img alt="" class="card-img-top" src="img/'.$name.'.jpg">';
 		?>
 		<div class="card-body">
 		
