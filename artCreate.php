@@ -40,7 +40,7 @@ if ($conn->connect_error) {
 
 $sql2='SELECT UserID FROM akkount WHERE Username=\''.$usrn.'\'';
 $query2 = mysqli_query($conn, $sql2);
-echo $sql2;
+
 while ($row = mysqli_fetch_assoc($query2)){
 	$userid=$row['UserID'];
 }
@@ -48,7 +48,6 @@ while ($row = mysqli_fetch_assoc($query2)){
 
 $sql = 'INSERT INTO aanbieding (NaamAanbieding, Beschrijving, Prijs, Status, Datum, Categorie, AanbiederID)
 VALUES (\''.$naam.'\', \''.$desc.'\', \''.$prijs.'\', \'Beschikbaar\', \''.date("Y-m-d").'\',\''.$varSort.'\', \''.$userid.'\')';
-echo $sql;
 
 mysqli_query($conn, $sql);
 

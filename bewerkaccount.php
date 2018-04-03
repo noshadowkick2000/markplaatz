@@ -68,9 +68,7 @@
           </li>
   			</ul> 		
   		</nav>
-  		<div class="alert alert-primary">
-  			<strong>Melding </strong>.......
-  		</div>
+  		
   	</div> 
 
 <br><br>

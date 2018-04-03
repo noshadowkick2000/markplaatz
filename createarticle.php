@@ -71,9 +71,7 @@
 
 <br><br>
     <div class="container">
-		<div class="alert alert-danger">
-			<strong>Notification: </strong><i>Description</i>
-		</div>
+		
 		<h2>Artikel Aanmaken</h2>
 		
 		
@@ -123,7 +121,7 @@
 							
 							$sql2='SELECT UserID FROM akkount WHERE Username=\''.$usrn.'\'';
 							$query2 = mysqli_query($conn, $sql2);
-							echo $sql2;
+							
 							while ($row = mysqli_fetch_assoc($query2)){
 								$userid=$row['UserID'];
 							}
