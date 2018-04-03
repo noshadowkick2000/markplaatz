@@ -93,7 +93,10 @@
 		<?php
 		$id = $_GET['userid'];
 		// Create connection
-
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
 						$conn2 = mysqli_connect('azura.ga', $username, $password, $dbname);
 						
 						// Query om weer te geven wie een aanbieding geplaatst heeft, door deze vervolgens te combineren met een array
@@ -113,11 +116,11 @@
 						
 						
 						while ($row = mysqli_fetch_assoc($result)){
-							$username = $row['Username'];
+							$name = $row['Username'];
 						}
 							
 		
-		echo '<h4 id="nHead">$username</h4>';
+		echo '<h4 id="nHead">'$name'</h4>';
 		?>
 		
 		
