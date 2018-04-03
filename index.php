@@ -72,34 +72,7 @@
 	 
 
     <div class="container">
-      <div class="row">
-        <div class="col-sm-3"> 
-          <nav class="navbar" style="background-color:#191818; border-radius:0.5vw;">
-
-            <!-- Links -->
-            <ul class="navbar-nav" style="color:white;">
-              <style>
-                a{
-                  color:white;
-                }
-              </style>
-
-              <li><h4 style="color:#EF5007">Groepen</h4></li>
-              <li><a href="#">Antiek en Kunst</a></li>
-              <li><a href="#">Verzorging</a></li>
-
-              <li style="color:#EF5007"><b>Vrije tijd</b></li>
-              <li><a href="#">Boeken</a></li>
-              <li><a href="#">Films en Muziek</a></li>
-              <li><a href="#">Gaming</a></li>
-
-              <li style="color:#EF5007"><b>Op de weg</b></li>
-              <li><a href="#">Auto's</a></li>
-              <li><a href="#">Fietsen</a></li>
-              <li><a href="#">Trekkers</a></li>
-            </ul>
-          </nav>
-        </div>
+      
         <div class="col-sm-8">
 
           <H3>Recent geplaatst</H3>
