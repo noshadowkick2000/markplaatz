@@ -131,43 +131,6 @@
         <div class="form-group">
           <label for="pwd">Wachtwoord* </label>
           <input type="password" class="form-control" id="pwd" name="pswd">
-		  <?php
-						$servername = "azura.ga";
-						$username = "mark";
-						$password = "jd6320";
-						$dbname = "markplaatz";
-
-						// Create connection
-
-						$conn = new mysqli($servername, $username, $password, $dbname);
-						
-						$sql = "SELECT wachtwoord FROM akkount WHERE Username='" . $usrn . "'";
-						$loc = $conn->query($sql);
-						
-						$result = $conn->query($sql);
-
-						if ($result->num_rows > 0) {
-						// output data of each row
-						while($row = $result->fetch_assoc()) {
-						$res = $row["wachtwoord"];
-						}
-						} else {
-						$res = "";
-						}
-						
-						if ($res == NULL){
-						$pwd = "";
-						}else{
-						$pwd = $res;
-						}
-						
-						$conn->close();
-						
-		?>
-		<script>
-		var pwd = "<?= $pwd;?>";		
-		document.getElementById("pwd").value = pwd;
-		</script>
         </div>
 
 
