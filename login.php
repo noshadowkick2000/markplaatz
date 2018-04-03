@@ -77,7 +77,6 @@
         <strong>Pas op! </strong>Geef uw informatie nooit door aan derden.
       </div>
       <h2>Inloggen</h2>
-     
       <form action="login_auth.php" method="post">
         <div class="form-group">
           <label for="usr">Gebruikersnaam</label>

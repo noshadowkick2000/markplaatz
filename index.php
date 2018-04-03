@@ -67,11 +67,14 @@
   		</nav>
   		
   	</div>
-	 
-
+    <div class="container">
+	   <div class="alert alert-primary" id="nHEAD">
+          .....
+      </div>
+      </div>
     <div class="container">
       
-        
+        <BR>
 
           <H3>Recent geplaatst</H3>
           <div class="table-responsive-xl" style="overflow-x:auto;">
