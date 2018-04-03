@@ -307,7 +307,7 @@
 	if ($query == null){
 		echo "Dit persoon heeft nog geen artikelen geplaatst";
 	}
-	Else {
+	else {
 		while ($row = mysqli_fetch_array($query)){
 						$servername = "azura.ga";
 						$username = "mark";
@@ -361,9 +361,9 @@
 							<br>';
 			 
 						}
-		}
-	}
-		?>
+					}
+				}
+			?>
 		</tbody>
 		
 	</table>
