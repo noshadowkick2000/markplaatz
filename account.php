@@ -115,7 +115,7 @@
 						}
 						
 						if ($res == NULL){
-						$mail = "Deze persoon heeft nog geen mailadres toegevoegd";
+						$mail = "Dit persoon heeft nog geen mailadres toegevoegd";
 						}else{
 						$mail = $res;
 						}
@@ -157,7 +157,7 @@
 						}
 						
 						if ($res == NULL){
-						$bio = "Deze persoon heeft nog geen beschrijving geschreven";
+						$bio = "Dit persoon heeft nog geen beschrijving geschreven";
 						}else{
 						$bio = $res;
 						}
@@ -249,7 +249,7 @@
 						}
 						
 						if (!$sql) {
-							die ('Deze persoon heeft nog geen artikelen aangeboden');
+							die ('Dit persoon heeft nog geen artikelen aangeboden');
 						}
 						
 						$conn->close();
@@ -282,7 +282,7 @@
 		<?php
 	// Zorgt voor een Array, waardoor ieder zoekresultaat afzondeerlijk te bekijken is
 	if ($query == null){
-		echo "Deze persoon heeft nog geen artikelen geplaatst";
+		echo "Dit persoon heeft nog geen artikelen geplaatst";
 	}
 	Else {
 		while ($row = mysqli_fetch_array($query)){
@@ -328,7 +328,12 @@
 							</div>
 							
 							<div class="card-footer">
-							<a href="article.php?id='.$row['AanbiedingID'].'"><Font color="blue">Artikel Bekijken</font></a>
+							<button type="submit" class="btn btn-danger"><a href="article.php?id='.$row['AanbiedingID'].'"><Font color="white">Artikel Bekijken</font></a></button>
+							
+							<button type="submit" class="btn btn-danger">
+								<a href="deletearticle.php?id='.$row['AanbiedingID'].'"><Font color="white">Artikel verwijderen</font></a>
+							</button>	
+							
 							</div>
 							<input type="hidden" name='.$row['NaamAanbieding'].' value='.$row['AanbiedingID'].'/>
 							

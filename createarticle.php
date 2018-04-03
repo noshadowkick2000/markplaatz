@@ -156,7 +156,7 @@
 									
 									echo "Het bestand ". basename( $_FILES["fileToUpload"]["name"]). " is geupload, hoera!";
 									$res = $target_file;
-									$ImgUp++;
+									
 									
 									
 							
@@ -182,11 +182,56 @@
 ?>
 					</div>
 				<div class="form-group">
-						<h3>Naam Aanbieding</h3>
+						
+	
+<form action="ArtCreate.php" method="post">
+      
+      <h5>Artikelinformatie</h5>
+        <div class="form-group">
+          <label for="Name">Naam aanbieding* </label>
+          <input type="Name" class="form-control" id="Name" name="name">
+        </div>
+         <div class="form-group">
+          <label for="Br">Beschrijving* </label>
+          <input type="Br" class="form-control" id="Br" name="Br">
+        </div>
+        <div class="form-group">
+          <label for="Price">Prijs* </label>
+          <input type="price" class="form-control" id="price" name="price">
+        </div>
+
+<p>
+categorie*
+<select name="formCategorie">
+  
+  <option value="Antiek en Kunst">Antiek en Kunst</option>
+  <option value="Verzorging">Verzorging</option>
+  <option value="Boeken">Boeken</option>
+  <option value="Films en Muziek">Films en Muziek</option>
+  <option value="Gaming">Gaming</option>
+  <option value="Auto\'s">Auto's</option>
+  <option value="Fietsen">Fietsen</option>
+  <option value="Trekkers">Trekkers</option>
+</select>
+</p>
+        
+
+       
+        <button type="submit" class="btn btn-danger">Artikel Aanmaken</button>
+      </form>
+
+
+
+
+
+
+
 					
 					
 				</div>
 				<div class="col-sm-4">
+				
+			
 
 				
 				

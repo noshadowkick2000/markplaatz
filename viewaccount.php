@@ -63,7 +63,7 @@
      			<a class="nav-link" href="createarticle.php">Aanbieding creëren</a>
     	  </li>
     	  <li>
-            	<a class="nav-link" id=bewerk href="bewerkaccount.php">MijnMarkplaatz bewerken</a>
+            	<a class="nav-link" id=bewerk href="account.php">MijnMarkplaatz</a>
 				<script>
 				if (stage == "0"){
 					document.getElementById("bewerk").href = "#";

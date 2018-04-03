@@ -61,7 +61,7 @@
 		  <li class="nav-item">
      				<a class="nav-link" href="createarticle.php">Aanbieding creëren</a>
     			</li>
-            <a class="nav-link" href="#">MijnMarktplaatz</a>
+            <a class="nav-link" href="account.php">MijnMarktplaatz</a>
           </li>
           <li class="nav-item navbar-right">
             <a class="nav-link" href="login.php" id="login">Login</a>
