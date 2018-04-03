@@ -1,4 +1,5 @@
 <?php
+
 $usrn = $_POST['un'];
 $new = "img/" . $usrn . ".jpg";
 $target_dir = "img/";
@@ -20,18 +21,24 @@ if(isset($_POST["submit"])) {
         $uploadOk = 0;
     }
 }
-
+// Allow certain file formats
+if($imageFileType != "jpg") {
+    echo " Sorry, u kan alleen jpg bestanden uploaden";
+    $uploadOk = 0;
+}
 if ($uploadOk == 0) {
     echo " Sorry, uw bestand is niet geupload.";
 // if everything is ok, try to upload file
+	header("Location: account.php");
+    session_start();
+	header("Location: error.php");
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 		rename($target_file,$new);
+		header("Location: account.php");
+		session_start();
     } else {
         echo " Er is iets mis gegaan.";
     }
 }
-
-header("Location: account.php");
-    session_start();
 ?>

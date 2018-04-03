@@ -88,6 +88,43 @@
         <div class="form-group">
           <label for="email">Emailadres* </label>
           <input type="email" class="form-control" id="email" name="em">
+		  <?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT Email FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["Email"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$mail = "";
+						}else{
+						$mail = $res;
+						}
+						
+						$conn->close();
+						
+		?>
+		<script>
+		var email = "<?= $mail;?>";		
+		document.getElementById("email").value = email;
+		</script>
         </div>
 		<div class="form-group">
           <input type="hidden" class="form-control" id="usr" name="un">
@@ -96,6 +133,43 @@
         <div class="form-group">
           <label for="pwd">Wachtwoord* </label>
           <input type="password" class="form-control" id="pwd" name="pswd">
+		  <?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT wachtwoord FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["wachtwoord"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$pwd = "";
+						}else{
+						$pwd = $res;
+						}
+						
+						$conn->close();
+						
+		?>
+		<script>
+		var pwd = "<?= $pwd;?>";		
+		document.getElementById("pwd").value = pwd;
+		</script>
         </div>
 
 
@@ -104,27 +178,249 @@
 		<div class="form-group">
           <label for="street">Korte omschrijving </label>
           <input type="text" class="form-control" id="bio" name="bio">
+		  <?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT beschrijvinglang FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["beschrijvinglang"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$bio = "";
+						}else{
+						$bio = $res;
+						}
+						
+						$conn->close();
+						
+		?>
+		<script>
+		var bio = "<?= $bio;?>";		
+		document.getElementById("bio").value = bio;
+		</script>
         </div>
 		
         <div class="form-group">
           <label for="street">Straatnaam </label>
           <input type="text" class="form-control" id="street" name="street">
+		  <?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT straat FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["straat"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$straat = "";
+						}else{
+						$straat = $res;
+						}
+						
+						$conn->close();
+						
+		?>
+		<script>
+		var straat = "<?= $straat;?>";		
+		document.getElementById("street").value = straat;
+		</script>
         </div>
 
         <div class="form-group">
           <label for="sNum">Huisnummer </label>
           <input type="text" class="form-control" id="sNum" name="sn">
+		  <?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT huisnummer FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["huisnummer"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$snum = "";
+						}else{
+						$snum = $res;
+						}
+						
+						$conn->close();
+						
+		?>
+		<script>
+		var snum = "<?= $snum;?>";		
+		document.getElementById("snum").value = snum;
+		</script>
         </div>
 
         <div class="form-group">
           <label for="postcode">Postcode </label>
           <input type="text" class="form-control" id="postcode pst-num" name="pcc">
+		  <?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT postcodenum FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["postcodenum"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$pcnum = "";
+						}else{
+						$pcnum = $res;
+						}
+						
+						$conn->close();
+						
+		?>
+		<script>
+		var pcnum = "<?= $pcnum;?>";		
+		document.getElementById("postcode pst-num").value = pcnum;
+		</script>
           <input type="text" class="form-control" id="postcode pst-char" name="pcl">
+		  <?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT postcodelt FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["postcodelt"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$pclt = "";
+						}else{
+						$pclt = $res;
+						}
+						
+						$conn->close();
+						
+		?>
+		<script>
+		var pclt = "<?= $pclt;?>";		
+		document.getElementById("postcode pst-char").value = pclt;
+		</script>
         </div>
 
         <div class="form-group">
           <label for="woonplaats">Woonplaats </label>
           <input type="text" class="form-control" id="woonplaats" name="wp">
+		  <?php
+						$servername = "azura.ga";
+						$username = "mark";
+						$password = "jd6320";
+						$dbname = "markplaatz";
+
+						// Create connection
+
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						
+						$sql = "SELECT woonplaats FROM akkount WHERE Username='" . $usrn . "'";
+						$loc = $conn->query($sql);
+						
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+						$res = $row["woonplaats"];
+						}
+						} else {
+						$res = "";
+						}
+						
+						if ($res == NULL){
+						$woon = "";
+						}else{
+						$woon = $res;
+						}
+						
+						$conn->close();
+						
+		?>
+		<script>
+		var woon = "<?= $woon;?>";		
+		document.getElementById("woonplaats").value = woon;
+		</script>
         </div>
 
        
