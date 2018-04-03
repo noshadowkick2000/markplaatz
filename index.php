@@ -73,7 +73,7 @@
 
     <div class="container">
       
-        <div class="col-sm-8">
+        
 
           <H3>Recent geplaatst</H3>
           <div class="table-responsive-xl" style="overflow-x:auto;">
@@ -85,7 +85,7 @@
          	</tbody>
           	</table>   
           </div>
-      </div>
+     
       
     </div>
   	
