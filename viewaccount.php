@@ -89,7 +89,37 @@
 		echo '<img alt="" class="card-img-top" src= "img/' . $id . '.jpg">';
 		?>
 		<div class="card-body">
-		<h4 id="nHead"><?php echo htmlspecialchars($usrn); ?></h4>
+		
+		<?php
+		$id = $_GET['userid'];
+		// Create connection
+
+						$conn2 = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
+						// Query om weer te geven wie een aanbieding geplaatst heeft, door deze vervolgens te combineren met een array
+						$sql2 = 'SELECT Username
+								FROM akkount 
+								WHERE UserID='.$id.'';
+								
+							
+		
+						$query2 = mysqli_query($conn2, $sql2);
+
+						if (!$query2) {
+							die ('SQL Error: ' . mysqli_error($conn2));
+						}
+						
+						$result = mysqli_query ($conn2, $sql2);
+						
+						
+						while ($row = mysqli_fetch_assoc($result)){
+							$username = $row['Username'];
+						}
+							
+		
+		echo '<h4 id="nHead">$username</h4>';
+		?>
+		
 		
 		<?php
 						$id = $_GET['userid'];
