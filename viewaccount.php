@@ -86,7 +86,7 @@
 		<div class="card bg-dark text-white">
 		<?php
 		$id = $_GET['userid'];
-		echo '<img alt="" class="card-img-top" src= "img/' . $userid . '.jpg">';
+		echo '<img alt="" class="card-img-top" src= "img/' . $id . '.jpg">';
 		?>
 		<div class="card-body">
 		<h4 id="nHead"><?php echo htmlspecialchars($usrn); ?></h4>
