@@ -222,7 +222,8 @@
 							</div>
 							
 							<div class="card-footer">
-							<a href="article.php?id='.$row['AanbiedingID'].'"><Font color="blue">Artikel Bekijken</font></a>
+							<button class="btn btn-danger"><a href="article.php?id='.$row['AanbiedingID'].'">Aanbieding bekijken</a></button>
+							
 							</div>
 							<input type="hidden" name='.$row['NaamAanbieding'].' value='.$row['AanbiedingID'].'/>
 							

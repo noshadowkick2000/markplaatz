@@ -130,7 +130,7 @@
           <div class="card-footer">
             <h4>Beschrijving</h4>
             <p id="ART-des">'.$row['Beschrijving'].'</p>
-            <button type="button" class="btn btn-danger">Artikel delen</button>
+            
 
           </div>
         
@@ -151,8 +151,9 @@
           </div>
           <div class="card-footer">
             <button type="button" class="btn btn-danger"><a href="viewaccount.php?userid='.$row['UserID'].'">Naar profielpagina</a></button>
-            <br>
+            <br><br>
             <button type="button" class="btn btn-danger"><a href="mailto:'.$row['Email'].'">Stuur bericht</button>
+			<br><br>
             <button type="button" class="btn btn-danger">Toon telefoonnummer</button>
           </div>
         </div>
