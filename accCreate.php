@@ -31,8 +31,8 @@ if ($conn->connect_error) {
 } 
 
 
-$sql = "INSERT INTO akkount (username, email, wachtwoord, postcodelt, postcodenum, huisnummer, straat, woonplaats, verwijderd, DatumReg)
-VALUES ('$un', '$email', '$pw_hash', '$postcodeCHAR', '$postcodeNUM', '$huisnummer','$straatnaam', '$woonplaats', 'True', \''.date("Y-m-d").'\')";
+$sql = 'INSERT INTO akkount (username, email, wachtwoord, postcodelt, postcodenum, huisnummer, straat, woonplaats, verwijderd, DatumReg)
+VALUES ('$un', '$email', '$pw_hash', '$postcodeCHAR', '$postcodeNUM', '$huisnummer','$straatnaam', '$woonplaats', 'True', \''.date("Y-m-d").'\')';
 
 if ($conn->query($sql) === TRUE) {
     header("Location: index.php");
