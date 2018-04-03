@@ -243,7 +243,7 @@
 							
 						}
 						
-						$sql .= 'ORDER BY '.$varSort.''
+						$sql .= 'ORDER BY '.$varSort.'';
 						}
 						
 						// Als er geen categoriën geselecteerd zijn bestaat de query alleen uit zoeken op resultaten die overeen komen met de zoektekst
