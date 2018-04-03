@@ -60,7 +60,7 @@
         <ul class="nav navbar-nav ml-auto">
           
 		  <li class="nav-item">
-     			<a class="nav-link" href="createarticle.php">Aanbieding creëren</a>
+     			<a class="nav-link" href="Forum.php">Forum</a>
     	  </li>
     	  <li>
             	<a class="nav-link" id=bewerk href="bewerkaccount.php">MijnMarkplaatz bewerken</a>
@@ -115,7 +115,7 @@
 						}
 						
 						if ($res == NULL){
-						$mail = "Deze persoon heeft nog geen mailadres toegevoegd";
+						$mail = "Dit persoon heeft nog geen mailadres toegevoegd";
 						}else{
 						$mail = $res;
 						}
@@ -157,7 +157,7 @@
 						}
 						
 						if ($res == NULL){
-						$bio = "Deze persoon heeft nog geen beschrijving geschreven";
+						$bio = "Dit persoon heeft nog geen beschrijving geschreven";
 						}else{
 						$bio = $res;
 						}
@@ -249,7 +249,7 @@
 						}
 						
 						if (!$sql) {
-							die ('Deze persoon heeft nog geen artikelen aangeboden');
+							die ('Dit persoon heeft nog geen artikelen aangeboden');
 						}
 						
 						$conn->close();
@@ -282,7 +282,7 @@
 		<?php
 	// Zorgt voor een Array, waardoor ieder zoekresultaat afzondeerlijk te bekijken is
 	if ($query == null){
-		echo "Deze persoon heeft nog geen artikelen geplaatst";
+		echo "Dit persoon heeft nog geen artikelen geplaatst";
 	}
 	Else {
 		while ($row = mysqli_fetch_array($query)){
