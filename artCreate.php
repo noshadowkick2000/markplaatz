@@ -46,11 +46,45 @@ while ($row = mysqli_fetch_assoc($query2)){
 
 
 $sql = 'INSERT INTO aanbieding (NaamAanbieding, Beschrijving, Prijs, Status, Datum, Categorie, AanbiederID)
-VALUES ('.$naam.', '.$desc.', '.$prijs.', Beschikbaar,'.date("Y-m-d").','.$varSort.', '.$userid.')';
+VALUES (\''.$naam.'\', \''.$desc.'\', \''.$prijs.'\', \'Beschikbaar\', \''.date("Y-m-d").'\',\''.$varSort.'\', \''.$userid.'\')';
+echo $sql;
 
 mysqli_query($conn, $sql);
-header('Location: index.php');
 
 
-$conn->close();
+
+
+?>
+
+						<?php
+						
+							$servername = "azura.ga";
+							$username = "mark";
+							$password = "jd6320";
+							$dbname = "markplaatz";
+
+							// Create connection
+
+							$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
+							$sql = 'SELECT MAX(AanbiedingID) AS MaxId
+								FROM aanbieding';
+						
+		
+							$query = mysqli_query($conn, $sql);
+
+							if (!$query) {
+								die ('SQL Error: ' . mysqli_error($conn));
+							}
+
+							while ($row = mysqli_fetch_array($query)){
+								$maxID = $row['MaxId'];
+	
+							}
+							
+							$target_file = $_POST['file'];
+							echo $target_file;
+							rename ($target_file, "prodimg/$maxID.jpg");
+							header ('Location: index.php')
+							
 ?>

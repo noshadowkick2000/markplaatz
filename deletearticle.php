@@ -12,7 +12,7 @@ $dbname = "markplaatz";
 						$sql = 'DELETE FROM aanbieding
 								WHERE AanbiedingID='.$id.'';
 						
-						unlink($id'.jpg');
+						
 							
 		
 						$query = mysqli_query($conn, $sql);

@@ -58,7 +58,7 @@
 		  <li class="nav-item">
      				<a class="nav-link" href="createarticle.php">Aanbieding creëren</a>
     			</li>
-            <a class="nav-link" href="#">MijnMarktplaatz</a>
+            <a class="nav-link" href="account.php">MijnMarktplaatz</a>
           </li>
           <li class="nav-item navbar-right">
             <a class="nav-link" href="login.php" id="login">Login</a>
@@ -122,7 +122,7 @@
 							}
 							
 							if (!empty($_FILES["fileToUpload"])){
-							$target_dir = "prodimg/";
+							$target_dir = "tempimg/";
 							$target_file = $target_dir . $maxID . '.jpg';
 							$uploadOk = 1;
 							$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -156,7 +156,7 @@
 									
 									echo "Het bestand ". basename( $_FILES["fileToUpload"]["name"]). " is geupload, hoera!";
 									$res = $target_file;
-									
+									echo '<input type="hidden" name="file" value="'.$target_file.'">';
 									
 									
 							
@@ -214,8 +214,9 @@ categorie*
   <option value="Trekkers">Trekkers</option>
 </select>
 </p>
-        
-
+        <?php
+		echo '<input type="hidden" name="file" value="'.$res.'">';
+		?>
        
         <button type="submit" class="btn btn-danger">Artikel Aanmaken</button>
       </form>
