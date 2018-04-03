@@ -150,7 +150,7 @@
             <p>Adres: '.$row['Woonplaats'].'<br> '.$row['Straat'].' '.$row['Huisnummer'].''.$row['Toevoeging'].'<br>'.$row['PostcodeNUM'].''.$row['PostcodeLT'].'</p>
           </div>
           <div class="card-footer">
-            <button type="button" class="btn btn-danger">Naar profielpagina</button>
+            <button type="button" class="btn btn-danger"><a href="viewaccount.php?userid='.$row['UserID'].'">Naar profielpagina</a></button>
             <br>
             <button type="button" class="btn btn-danger"><a href="mailto:'.$row['Email'].'">Stuur bericht</button>
             <button type="button" class="btn btn-danger">Toon telefoonnummer</button>
