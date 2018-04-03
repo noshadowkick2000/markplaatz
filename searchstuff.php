@@ -58,7 +58,7 @@
         <ul class="nav navbar-nav ml-auto">
           <li class="nav-item navbar-right">
 		  <li class="nav-item">
-     				<a class="nav-link" href="Forum.php">Forum</a>
+     				<a class="nav-link" href="createarticle.php">Aanbieding creëren</a>
     			</li>
             <a class="nav-link" href="account.php">MijnMarktplaatz</a>
           </li>
@@ -148,7 +148,10 @@
 			<tr>
 				<form method="POST" action="">
 					
-					<?php
+					<?php					
+					
+					
+					
 						$varSort = $_POST['formSort'];
 
 
@@ -160,9 +163,14 @@
 						// Create connection
 						
 						$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
-						
+						$sql="";
 						$naam=$_POST['zoektext'];
 						
+						if (strpos($naam, "'") !== false) {
+								echo 'Er is geen valide zoekterm ingevuld! Probeer opnieuw.';
+						}
+						
+						else{
 						// als er een een van de checkboxes aangevinkt is wordt de sql samengesteld volgens onderstaande code.
 						if ($_POST['Antiek'] == "1" || $_POST['verz'] == "2" || $_POST['boek'] == "3" || $_POST['film'] == "4" || $_POST['game'] == "5" || $_POST['auto'] == "6" || $_POST['fiets'] == "7" || $_POST['6320'] == "8"){
 						// er komt door deze query nog geen resultaat aan bod, waardoor er makkelijk een OR statement aan te koppelen is
@@ -248,11 +256,15 @@
 						
 						
 						
+						
+						
 						$query = mysqli_query($conn, $sql);
 
 						if (!$query){
 							die ('SQL Error: ' . mysqli_error($conn));
 						}
+						}
+						
 ?>
 					
 	
@@ -262,6 +274,12 @@
 		<tbody>
 		<?php
 		// Zelfde als in products.php, maar dan met de resultaten van de zoek query
+		
+		if (strpos($naam, "'") !== false) {
+		
+		}
+		
+		else{
 		while ($row = mysqli_fetch_array($query))
 		{
 						$servername = "azura.ga";
@@ -287,6 +305,8 @@
 						
 						$result = mysqli_query ($conn2, $sql2);
 						
+						
+						
 						while ($id = mysqli_fetch_assoc($result)){
 							
 						
@@ -310,12 +330,15 @@
 							</div>
 							</tr>
 							<br>';
-			 ;
+			 
 			 
 						}
-			 
 						
-		}?>
+						
+						
+		}
+		}
+		?>
 		</tbody>
 		
 	</table>

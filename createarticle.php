@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <title>Markplaatz - Registreren</title>
@@ -58,7 +56,7 @@
         <ul class="nav navbar-nav ml-auto">
           <li class="nav-item navbar-right">
 		  <li class="nav-item">
-     				<a class="nav-link" href="Forum.php">Forum</a>
+     				<a class="nav-link" href="createarticle.php">Aanbieding creëren</a>
     			</li>
             <a class="nav-link" href="#">MijnMarktplaatz</a>
           </li>
@@ -78,15 +76,114 @@
 		</div>
 		<h2>Artikel Aanmaken</h2>
 		
-		<form action="createArticle.php">
+		
 			<div class="jumbotron">
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="form-group">
 						<h3>Afbeelding</h3>
-						<img class="mx-auto d-block" width="400" style="border: 10px solid #EF5007" src="res/img.png">
 						
+						
+						
+							
+						<form action="" method="post" enctype="multipart/form-data">
+							
+							
+							<input type="file" name="fileToUpload" id="fileToUpload">
+							<input type="submit" value="Upload Afbeelding" name="submit">
+						
+							
+						</form>
+						
+						<?php
+						
+							$servername = "azura.ga";
+							$username = "mark";
+							$password = "jd6320";
+							$dbname = "markplaatz";
+
+							// Create connection
+
+							$conn = mysqli_connect('azura.ga', $username, $password, $dbname);
+						
+							$sql = 'SELECT MAX(AanbiedingID) AS MaxId
+								FROM aanbieding';
+						
+		
+							$query = mysqli_query($conn, $sql);
+
+							if (!$query) {
+								die ('SQL Error: ' . mysqli_error($conn));
+							}
+
+							while ($row = mysqli_fetch_array($query)){
+								$maxID = $row['MaxId'] + 1;
+	
+							}
+							
+							if (!empty($_FILES["fileToUpload"])){
+							$target_dir = "prodimg/";
+							$target_file = $target_dir . $maxID . '.jpg';
+							$uploadOk = 1;
+							$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+							// Check if image file is a actual image or fake image
+							if(isset($_POST["submit"])) {
+							$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+							if($check !== false) {
+								
+								$uploadOk = 1;
+							} 
+							else {
+								
+								$img="Bestand is geen afbeelding. ";
+								$uploadOk = 0;
+								}
+							}
+							
+							// Check file size
+							if ($_FILES["fileToUpload"]["size"] > 500000000) {
+								echo "Helaas, je bestand is te groot. ";
+								$uploadOk = 0;
+							}
+							
+							// Check if $uploadOk is set to 0 by an error
+							if ($uploadOk == 0) {
+								echo "Helaas, je bestand is niet geupload. ";
+							}
+							// if everything is ok, try to upload file							
+							else {
+								if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+									
+									echo "Het bestand ". basename( $_FILES["fileToUpload"]["name"]). " is geupload, hoera!";
+									$res = $target_file;
+									$ImgUp++;
+									
+									
+							
+									echo '<img class="mx-auto d-block" width="400" style="border: 10px solid #EF5007" src="'.$target_file.'">';
+							
+								} 
+								else {
+									echo "Helaas, er is een fout opgetreden bij het uploaden van je bestand.";
+								}	
+							}	
+							}
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+?>
 					</div>
+				<div class="form-group">
+						<h3>Naam Aanbieding</h3>
+					
 					
 				</div>
 				<div class="col-sm-4">
@@ -97,7 +194,7 @@
 				</div>
 			</div>
 			</div>
-		</form>
+		
     </div>
 
   	
