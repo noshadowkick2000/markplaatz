@@ -60,7 +60,7 @@
         <ul class="nav navbar-nav ml-auto">
           
 		  <li class="nav-item">
-     			<a class="nav-link" href="createarticle.php">Aanbieding creëren</a>
+     			<a class="nav-link" href="Forum.php">Forum</a>
     	  </li>
     	  <li>
             	<a class="nav-link" id=bewerk href="bewerkaccount.php">MijnMarkplaatz bewerken</a>
