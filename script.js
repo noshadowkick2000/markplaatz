@@ -8,7 +8,7 @@ function cLoad(){
 			break;
 		;
 		case 1:
-			document.getElementById('nHEAD').innerHTML = "Welkom, " + usrn + ".";
+			document.getElementById('nHEAD').innerHTML = "Welkom op de Markplaatz, <b>" + usrn + "</b>.";
 			adjustLogin(1);
 			break;
 		;

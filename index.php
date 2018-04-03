@@ -32,16 +32,16 @@
        <script>var stage = "<?= $st;?>"</script>
        <script>var usrn = "<?= $usrn;?>"</script>
 
-       <style>
-                a{
-                  color:white;
-                }
-              </style>
+       	<style>
+            a{
+               color:white;
+             }
+        </style>
   </head>
 
   <body onload="cLoad();">
   	<div id="navi" class="container">
-      <a href="index.php"><img class="mx-auto d-block" height="150" src="res/Market-Logo.png"></a>
+      <a href="index.php"><img class="mx-auto d-block" height="150" src="res/Market-Logo-txt.png"></a>
   		<nav class="navbar navbar-expand-sm sticky-top" style="background-color:#191818; border-radius:0.5vw;">
   		
   			 <ul class="nav navbar-nav navbar-left">
@@ -103,10 +103,15 @@
         <div class="col-sm-8">
 
           <H3>Recent geplaatst</H3>
+          <div class="table-responsive-xl" style="overflow-x:auto;">
+          	<table class="table">
+          	<tbody>
           		<?php
           			include 'recentgeplaatst.php';
           		?>
-        
+         	</tbody>
+          	</table>   
+          </div>
       </div>
       
     </div>
