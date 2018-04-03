@@ -30,6 +30,7 @@ $desc = $_POST['Br'];
 
 // Create connection
 
+if ($usrn !=""){ 
 $conn = mysqli_connect('azura.ga', $username, $password, $dbname);
 
 // Check connection
@@ -51,13 +52,13 @@ echo $sql;
 
 mysqli_query($conn, $sql);
 
-
+}
 
 
 ?>
 
 						<?php
-						
+							
 							$servername = "azura.ga";
 							$username = "mark";
 							$password = "jd6320";

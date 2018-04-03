@@ -215,8 +215,17 @@ categorie*
 </select>
 </p>
         <?php
+		
+		if (!isset($res)){
+			$res = "res/test-img.png";
+			echo '<input type="hidden" name="file" value="'.$res.'">';
+		}
+		else{
+		
 		echo '<input type="hidden" name="file" value="'.$res.'">';
+		}
 		?>
+		
        
         <button type="submit" class="btn btn-danger">Artikel Aanmaken</button>
       </form>

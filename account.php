@@ -60,7 +60,12 @@
         <ul class="nav navbar-nav ml-auto">
           
 		  <li class="nav-item">
-     			<a class="nav-link" href="Forum.php">Forum</a>
+     			<a class="nav-link" id=bewerk href="avatar.php">Profielfoto toevoegen</a>
+				<script>
+				if (stage == "0"){
+					document.getElementById("bewerk").href = "#";
+				}
+				</script>
     	  </li>
     	  <li>
             	<a class="nav-link" id=bewerk href="bewerkaccount.php">MijnMarkplaatz bewerken</a>
@@ -85,7 +90,7 @@
         <div class="card">
 		<div class="card bg-dark text-white">
 		<?php
-		echo '<img alt="" class="card-img-top" src= "img/' . $usrn . '.jpg" id=avatar>';
+		echo '<img alt="" class="card-img-top" src= "img/' . $usrn . '.jpg">';
 		?>
 		<div class="card-body">
 		<h4 id="nHead"><?php echo htmlspecialchars($usrn); ?></h4>
@@ -328,6 +333,7 @@
 							</div>
 							
 							<div class="card-footer">
+<<<<<<< HEAD
 							<button type="submit" class="btn btn-danger"><a href="article.php?id='.$row['AanbiedingID'].'"><Font color="white">Artikel Bekijken</font></a></button>
 							
 							
@@ -335,6 +341,9 @@
 								<a href="deletearticle.php?id='.$row['AanbiedingID'].'"><Font color="Black"> Artikel verwijderen</font></a>
 							
 							
+=======
+							<a href="article.php?id='.$row['AanbiedingID'].'"><Font color="blue">Artikel Bekijken</font></a>
+>>>>>>> 8d0c2e80572239f272be2045644877b4f9f529e2
 							</div>
 							<input type="hidden" name='.$row['NaamAanbieding'].' value='.$row['AanbiedingID'].'/>
 							
